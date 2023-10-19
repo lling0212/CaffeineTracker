@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91774C7F2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C6D2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf */; };
+		91774C802AE17E0A0078818A /* Nexa-Trial-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C6E2AE17E0A0078818A /* Nexa-Trial-Heavy.ttf */; };
+		91774C812AE17E0A0078818A /* Nexa-Trial-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C6F2AE17E0A0078818A /* Nexa-Trial-Thin.ttf */; };
+		91774C822AE17E0A0078818A /* Nexa-Trial-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C702AE17E0A0078818A /* Nexa-Trial-RegularItalic.ttf */; };
+		91774C832AE17E0A0078818A /* Nexa-Trial-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C712AE17E0A0078818A /* Nexa-Trial-HeavyItalic.ttf */; };
+		91774C842AE17E0A0078818A /* Nexa-Trial-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C722AE17E0A0078818A /* Nexa-Trial-LightItalic.ttf */; };
+		91774C852AE17E0A0078818A /* Nexa-Trial-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C732AE17E0A0078818A /* Nexa-Trial-Book.ttf */; };
+		91774C862AE17E0A0078818A /* Nexa-Trial-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C742AE17E0A0078818A /* Nexa-Trial-Bold.ttf */; };
+		91774C872AE17E0A0078818A /* Nexa-Trial-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C752AE17E0A0078818A /* Nexa-Trial-ExtraLightItalic.ttf */; };
+		91774C882AE17E0A0078818A /* Nexa-Trial-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C762AE17E0A0078818A /* Nexa-Trial-Light.ttf */; };
+		91774C892AE17E0A0078818A /* Nexa-Trial-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C772AE17E0A0078818A /* Nexa-Trial-BlackItalic.ttf */; };
+		91774C8A2AE17E0A0078818A /* Nexa-Trial-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C782AE17E0A0078818A /* Nexa-Trial-BookItalic.ttf */; };
+		91774C8B2AE17E0A0078818A /* Nexa-Trial-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C792AE17E0A0078818A /* Nexa-Trial-Black.ttf */; };
+		91774C8C2AE17E0A0078818A /* Nexa-Trial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C7A2AE17E0A0078818A /* Nexa-Trial-Regular.ttf */; };
+		91774C8D2AE17E0A0078818A /* Nexa-Trial-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C7B2AE17E0A0078818A /* Nexa-Trial-ExtraLight.ttf */; };
+		91774C8E2AE17E0A0078818A /* Nexa-Trial-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C7C2AE17E0A0078818A /* Nexa-Trial-ThinItalic.ttf */; };
+		91774C8F2AE17E0A0078818A /* Nexa-Trial-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C7D2AE17E0A0078818A /* Nexa-Trial-BoldItalic.ttf */; };
+		91774C902AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C7E2AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf */; };
+		91774C932AE189270078818A /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C922AE189270078818A /* FontBlaster.swift */; };
+		91774C952AE18A2C0078818A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C942AE18A2C0078818A /* FontHelper.swift */; };
 		91D3CE1D2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE1C2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift */; };
 		91D3CE1F2AE09A2F007A1EB9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE1E2AE09A2F007A1EB9 /* MainView.swift */; };
 		91D3CE212AE09A30007A1EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D3CE202AE09A30007A1EB9 /* Assets.xcassets */; };
@@ -64,6 +84,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91774C6D2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-ExtraBold.ttf"; sourceTree = "<group>"; };
+		91774C6E2AE17E0A0078818A /* Nexa-Trial-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Heavy.ttf"; sourceTree = "<group>"; };
+		91774C6F2AE17E0A0078818A /* Nexa-Trial-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Thin.ttf"; sourceTree = "<group>"; };
+		91774C702AE17E0A0078818A /* Nexa-Trial-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-RegularItalic.ttf"; sourceTree = "<group>"; };
+		91774C712AE17E0A0078818A /* Nexa-Trial-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		91774C722AE17E0A0078818A /* Nexa-Trial-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-LightItalic.ttf"; sourceTree = "<group>"; };
+		91774C732AE17E0A0078818A /* Nexa-Trial-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Book.ttf"; sourceTree = "<group>"; };
+		91774C742AE17E0A0078818A /* Nexa-Trial-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Bold.ttf"; sourceTree = "<group>"; };
+		91774C752AE17E0A0078818A /* Nexa-Trial-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		91774C762AE17E0A0078818A /* Nexa-Trial-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Light.ttf"; sourceTree = "<group>"; };
+		91774C772AE17E0A0078818A /* Nexa-Trial-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-BlackItalic.ttf"; sourceTree = "<group>"; };
+		91774C782AE17E0A0078818A /* Nexa-Trial-BookItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-BookItalic.ttf"; sourceTree = "<group>"; };
+		91774C792AE17E0A0078818A /* Nexa-Trial-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Black.ttf"; sourceTree = "<group>"; };
+		91774C7A2AE17E0A0078818A /* Nexa-Trial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Regular.ttf"; sourceTree = "<group>"; };
+		91774C7B2AE17E0A0078818A /* Nexa-Trial-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-ExtraLight.ttf"; sourceTree = "<group>"; };
+		91774C7C2AE17E0A0078818A /* Nexa-Trial-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-ThinItalic.ttf"; sourceTree = "<group>"; };
+		91774C7D2AE17E0A0078818A /* Nexa-Trial-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-BoldItalic.ttf"; sourceTree = "<group>"; };
+		91774C7E2AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		91774C912AE1826D0078818A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		91774C922AE189270078818A /* FontBlaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontBlaster.swift; sourceTree = "<group>"; };
+		91774C942AE18A2C0078818A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		91D3CE192AE09A2F007A1EB9 /* CaffeineTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D3CE1C2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineTrackerApp.swift; sourceTree = "<group>"; };
 		91D3CE1E2AE09A2F007A1EB9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -132,6 +173,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91774C6C2AE17E0A0078818A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				91774C6D2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf */,
+				91774C6E2AE17E0A0078818A /* Nexa-Trial-Heavy.ttf */,
+				91774C6F2AE17E0A0078818A /* Nexa-Trial-Thin.ttf */,
+				91774C702AE17E0A0078818A /* Nexa-Trial-RegularItalic.ttf */,
+				91774C712AE17E0A0078818A /* Nexa-Trial-HeavyItalic.ttf */,
+				91774C722AE17E0A0078818A /* Nexa-Trial-LightItalic.ttf */,
+				91774C732AE17E0A0078818A /* Nexa-Trial-Book.ttf */,
+				91774C742AE17E0A0078818A /* Nexa-Trial-Bold.ttf */,
+				91774C752AE17E0A0078818A /* Nexa-Trial-ExtraLightItalic.ttf */,
+				91774C762AE17E0A0078818A /* Nexa-Trial-Light.ttf */,
+				91774C772AE17E0A0078818A /* Nexa-Trial-BlackItalic.ttf */,
+				91774C782AE17E0A0078818A /* Nexa-Trial-BookItalic.ttf */,
+				91774C792AE17E0A0078818A /* Nexa-Trial-Black.ttf */,
+				91774C7A2AE17E0A0078818A /* Nexa-Trial-Regular.ttf */,
+				91774C7B2AE17E0A0078818A /* Nexa-Trial-ExtraLight.ttf */,
+				91774C7C2AE17E0A0078818A /* Nexa-Trial-ThinItalic.ttf */,
+				91774C7D2AE17E0A0078818A /* Nexa-Trial-BoldItalic.ttf */,
+				91774C7E2AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		91D3CE102AE09A2F007A1EB9 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +217,8 @@
 		91D3CE1B2AE09A2F007A1EB9 /* CaffeineTracker */ = {
 			isa = PBXGroup;
 			children = (
+				91774C912AE1826D0078818A /* Info.plist */,
+				91774C6C2AE17E0A0078818A /* Fonts */,
 				91D3CE662AE0A441007A1EB9 /* Others */,
 				91D3CE652AE0A41C007A1EB9 /* Models */,
 				91D3CE642AE0A3FF007A1EB9 /* ViewModels */,
@@ -215,9 +283,11 @@
 		91D3CE662AE0A441007A1EB9 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				91774C922AE189270078818A /* FontBlaster.swift */,
 				91D3CE202AE09A30007A1EB9 /* Assets.xcassets */,
 				91D3CE612AE09E5D007A1EB9 /* GoogleService-Info.plist */,
 				91D3CE1C2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift */,
+				91774C942AE18A2C0078818A /* FontHelper.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -312,9 +382,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91774C822AE17E0A0078818A /* Nexa-Trial-RegularItalic.ttf in Resources */,
+				91774C892AE17E0A0078818A /* Nexa-Trial-BlackItalic.ttf in Resources */,
+				91774C812AE17E0A0078818A /* Nexa-Trial-Thin.ttf in Resources */,
+				91774C902AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf in Resources */,
+				91774C8C2AE17E0A0078818A /* Nexa-Trial-Regular.ttf in Resources */,
+				91774C862AE17E0A0078818A /* Nexa-Trial-Bold.ttf in Resources */,
+				91774C8A2AE17E0A0078818A /* Nexa-Trial-BookItalic.ttf in Resources */,
 				91D3CE242AE09A30007A1EB9 /* Preview Assets.xcassets in Resources */,
+				91774C8D2AE17E0A0078818A /* Nexa-Trial-ExtraLight.ttf in Resources */,
+				91774C832AE17E0A0078818A /* Nexa-Trial-HeavyItalic.ttf in Resources */,
+				91774C852AE17E0A0078818A /* Nexa-Trial-Book.ttf in Resources */,
+				91774C8F2AE17E0A0078818A /* Nexa-Trial-BoldItalic.ttf in Resources */,
 				91D3CE212AE09A30007A1EB9 /* Assets.xcassets in Resources */,
+				91774C882AE17E0A0078818A /* Nexa-Trial-Light.ttf in Resources */,
+				91774C872AE17E0A0078818A /* Nexa-Trial-ExtraLightItalic.ttf in Resources */,
+				91774C842AE17E0A0078818A /* Nexa-Trial-LightItalic.ttf in Resources */,
 				91D3CE622AE09E5E007A1EB9 /* GoogleService-Info.plist in Resources */,
+				91774C8E2AE17E0A0078818A /* Nexa-Trial-ThinItalic.ttf in Resources */,
+				91774C7F2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf in Resources */,
+				91774C802AE17E0A0078818A /* Nexa-Trial-Heavy.ttf in Resources */,
+				91774C8B2AE17E0A0078818A /* Nexa-Trial-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +415,7 @@
 			files = (
 				91D3CE6F2AE0A609007A1EB9 /* JournalView.swift in Sources */,
 				91D3CE832AE0A7CB007A1EB9 /* DrinkItem.swift in Sources */,
+				91774C932AE189270078818A /* FontBlaster.swift in Sources */,
 				91D3CE872AE0A817007A1EB9 /* MainViewViewModel.swift in Sources */,
 				91D3CE892AE0A824007A1EB9 /* ProfileViewViewModel.swift in Sources */,
 				91D3CE752AE0A670007A1EB9 /* DrinkListView.swift in Sources */,
@@ -334,6 +423,7 @@
 				91D3CE732AE0A657007A1EB9 /* NewJournalItemView.swift in Sources */,
 				91D3CE712AE0A636007A1EB9 /* JournalItemView.swift in Sources */,
 				91D3CE6B2AE0A5B2007A1EB9 /* SummaryView.swift in Sources */,
+				91774C952AE18A2C0078818A /* FontHelper.swift in Sources */,
 				91D3CE852AE0A7F2007A1EB9 /* JournalItem.swift in Sources */,
 				91D3CE6D2AE0A5C6007A1EB9 /* CaldendarView.swift in Sources */,
 				91D3CE692AE0A593007A1EB9 /* ProfileView.swift in Sources */,
@@ -484,6 +574,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CaffeineTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaffeineTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Daily Caffeine Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -512,6 +603,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CaffeineTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CaffeineTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Daily Caffeine Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -10,13 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
     }
+    
+    
+    
+//    init() {
+//        for name in UIFont.familyNames {
+//            print(name)
+//            
+//            for fontName in UIFont.fontNames(forFamilyName: name) {
+//                
+//                print("-- \(fontName)")
+//            }
+//            
+//        }
+//    }
+    
 }
 
 #Preview {

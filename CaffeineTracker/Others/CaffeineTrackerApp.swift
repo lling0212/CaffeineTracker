@@ -12,6 +12,9 @@ import FirebaseCore
 struct CaffeineTrackerApp: App {
     init() {
         FirebaseApp.configure()
+        FontBlaster.blast() { (fonts) in
+            print(fonts) // fonts is an array of Strings containing font names
+          }
     }
     
     var body: some Scene {
