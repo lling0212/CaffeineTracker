@@ -27,6 +27,9 @@
 		91774C902AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C7E2AE17E0A0078818A /* Nexa-Trial-ExtraBoldItalic.ttf */; };
 		91774C932AE189270078818A /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C922AE189270078818A /* FontBlaster.swift */; };
 		91774C952AE18A2C0078818A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C942AE18A2C0078818A /* FontHelper.swift */; };
+		91B2C1BA2AE7663300F4B222 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1B92AE7663300F4B222 /* HeaderView.swift */; };
+		91B2C1BC2AE76BC500F4B222 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */; };
+		91B2C1BE2AE76DD200F4B222 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */; };
 		91D3CE1D2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE1C2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift */; };
 		91D3CE1F2AE09A2F007A1EB9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE1E2AE09A2F007A1EB9 /* MainView.swift */; };
 		91D3CE212AE09A30007A1EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D3CE202AE09A30007A1EB9 /* Assets.xcassets */; };
@@ -105,6 +108,9 @@
 		91774C912AE1826D0078818A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91774C922AE189270078818A /* FontBlaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontBlaster.swift; sourceTree = "<group>"; };
 		91774C942AE18A2C0078818A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		91B2C1B92AE7663300F4B222 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
+		91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 		91D3CE192AE09A2F007A1EB9 /* CaffeineTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaffeineTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D3CE1C2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineTrackerApp.swift; sourceTree = "<group>"; };
 		91D3CE1E2AE09A2F007A1EB9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 				91D3CE7E2AE0A73D007A1EB9 /* WelcomeView.swift */,
 				91D3CE782AE0A6D8007A1EB9 /* LoginView.swift */,
 				91D3CE7A2AE0A6E8007A1EB9 /* RegisterView.swift */,
+				91B2C1B92AE7663300F4B222 /* HeaderView.swift */,
+				91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				91D3CE8E2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift */,
 				91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */,
 				91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */,
+				91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -417,8 +426,10 @@
 				91D3CE832AE0A7CB007A1EB9 /* DrinkItem.swift in Sources */,
 				91774C932AE189270078818A /* FontBlaster.swift in Sources */,
 				91D3CE872AE0A817007A1EB9 /* MainViewViewModel.swift in Sources */,
+				91B2C1BE2AE76DD200F4B222 /* StyledButton.swift in Sources */,
 				91D3CE892AE0A824007A1EB9 /* ProfileViewViewModel.swift in Sources */,
 				91D3CE752AE0A670007A1EB9 /* DrinkListView.swift in Sources */,
+				91B2C1BC2AE76BC500F4B222 /* RegisterViewViewModel.swift in Sources */,
 				91D3CE1F2AE09A2F007A1EB9 /* MainView.swift in Sources */,
 				91D3CE732AE0A657007A1EB9 /* NewJournalItemView.swift in Sources */,
 				91D3CE712AE0A636007A1EB9 /* JournalItemView.swift in Sources */,
@@ -432,6 +443,7 @@
 				91D3CE792AE0A6D8007A1EB9 /* LoginView.swift in Sources */,
 				91D3CE932AE0A87F007A1EB9 /* CalendarViewViewModel.swift in Sources */,
 				91D3CE8D2AE0A847007A1EB9 /* DrinkListViewViewModel.swift in Sources */,
+				91B2C1BA2AE7663300F4B222 /* HeaderView.swift in Sources */,
 				91D3CE7D2AE0A712007A1EB9 /* NewDrinkItemView.swift in Sources */,
 				91D3CE7B2AE0A6E8007A1EB9 /* RegisterView.swift in Sources */,
 				91D3CE772AE0A691007A1EB9 /* DrinkListItemView.swift in Sources */,

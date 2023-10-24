@@ -11,23 +11,26 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Hello, world!")
+//                .font(.mySystemFont(ofSize: 16))
+//                .bold()
+            
         }
         .padding()
     }
     
     
     
-//    init() {
-//        for name in UIFont.familyNames {
-//            print(name)
-//            
-//            for fontName in UIFont.fontNames(forFamilyName: name) {
-//                
-//                print("-- \(fontName)")
-//            }
-//            
-//        }
-//    }
+    init() {
+        for name in UIFont.familyNames {
+            print(name)
+            
+            for fontName in UIFont.fontNames(forFamilyName: name) {
+                
+                print("-- \(fontName)")
+            }
+            
+        }
+    }
     
 }
 

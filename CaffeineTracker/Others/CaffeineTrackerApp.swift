@@ -8,13 +8,17 @@
 import SwiftUI
 import FirebaseCore
 
+
 @main
 struct CaffeineTrackerApp: App {
+    
     init() {
         FirebaseApp.configure()
-        FontBlaster.blast() { (fonts) in
-            print(fonts) // fonts is an array of Strings containing font names
-          }
+        FontBlaster.blast() //{ (fonts) in
+            //print(fonts) // fonts is an array of Strings containing font names
+        //}
+        UIFont.overrideInitialize()
+        
     }
     
     var body: some Scene {
