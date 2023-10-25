@@ -24,73 +24,42 @@ struct RegisterView: View {
                            subtitle: "Enter your information")
                 .listRowSeparator(.hidden)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("FIRST NAME")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    TextField("Enter your first name", text: $viewModel.firstName)
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 40))
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                        
-                }
-                .listRowSeparator(.hidden)
+                TextFieldView(
+                    label: "FIRST NAME",
+                    sublabel: "Enter your given name",
+                    viewModField: $viewModel.firstName,
+                    isSecure: false)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("LAST NAME")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    TextField("Enter your last name", text: $viewModel.lastName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                }
-                .listRowSeparator(.hidden)
+                TextFieldView(
+                    label: "LAST NAME",
+                    sublabel: "Enter your family name",
+                    viewModField: $viewModel.lastName,
+                    isSecure: false)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("EMAIL")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    TextField("Enter your email", text: $viewModel.email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                }
-                .listRowSeparator(.hidden)
+                TextFieldView(
+                    label: "EMAIL",
+                    sublabel: "Enter your email address",
+                    viewModField: $viewModel.email,
+                    isSecure: false)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("CREATE PASSWORD")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    SecureField("Enter your password", text: $viewModel.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                }
-                .listRowSeparator(.hidden)
+                TextFieldView(
+                    label: "CREATE PASSWORD",
+                    sublabel: "Enter your password",
+                    viewModField: $viewModel.password,
+                    isSecure: true)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("CONFIRM PASSWORD")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    SecureField("Confirm your password", text: $viewModel.confirmPassword)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                }
-                .listRowSeparator(.hidden)
+                TextFieldView(
+                    label: "CONFIRM PASSWORD",
+                    sublabel: "Re-enter your password",
+                    viewModField: $viewModel.password,
+                    isSecure: true)
                 
                 Spacer()
                     .listRowSeparator(.hidden)
                 
-                // Placeholder for button
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     
                 }
-                
-                // Fix spacing
                 
                 
             }

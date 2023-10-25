@@ -16,6 +16,8 @@ struct LoginView: View {
             Form {
                 
                 // fix font
+                // add header graphics
+                // replace w defined textfield structs
                 
                 HeaderView(title: "Login",
                            subtitle: "Login to continue using the app")
