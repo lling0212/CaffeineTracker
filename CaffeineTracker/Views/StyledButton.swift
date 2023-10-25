@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct StyledButton: View {
+    let title: String
+    let bg: Color
+    let action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            action()
+        } label: {
+            ZStack{
+                RoundedRectangle(cornerRadius: 30)
+                    .foregroundColor(bg)
+                Text(title)
+                    .foregroundStyle(.white)
+                    .font(Font.custom("Nexa-Trial-Bold", size: 14))
+                    
+            }
+            .frame(height: 45)
+        }
     }
 }
 
 #Preview {
-    StyledButton()
+    StyledButton(title: "Register", bg: .blue) {
+        
+    }
 }

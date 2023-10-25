@@ -14,55 +14,87 @@ struct RegisterView: View {
         VStack(alignment: .listRowSeparatorLeading) {
             
             Form {
+                
+                // Tap to add profile photo
+                // centered circle image
+                
+                // fix font
+                
                 HeaderView(title: "Register",
                            subtitle: "Enter your information")
+                .listRowSeparator(.hidden)
                 
-                Section(header: Text("First Name")
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))
-//                    .padding(.top, -20)
-                ) {
-                        TextField("Enter your first name", text: $viewModel.firstName)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .autocorrectionDisabled()
-                            .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    }
-                    .padding(.top, -5)
-                Section(header: Text("Last Name")
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))) {
-                        TextField("Enter your last name", text: $viewModel.lastName)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .autocorrectionDisabled()
-                            .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    }
-                    .padding(.top, -5)
-                Section(header: Text("Email")
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))) {
-                        TextField("Enter your email", text: $viewModel.email)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .autocorrectionDisabled()
-                            .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    }
-                    .padding(.top, -5)
-                Section(header: Text("Create a Password")
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))) {
-                        TextField("Enter your password", text: $viewModel.password)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .autocorrectionDisabled()
-                            .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    }
-                    .padding(.top, -5)
-                Section(header: Text("Confirm your Password")
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))) {
-                        TextField("Re-enter your password", text: $viewModel.confirmPassword)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .autocorrectionDisabled()
-                            .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    }
-                    .padding(.top, -5)
+                VStack(alignment: .leading, spacing: 10){
+                    Text("FIRST NAME")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    TextField("Enter your first name", text: $viewModel.firstName)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                }
+                .listRowSeparator(.hidden)
+                
+                VStack(alignment: .leading, spacing: 10){
+                    Text("LAST NAME")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    TextField("Enter your last name", text: $viewModel.lastName)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                }
+                .listRowSeparator(.hidden)
+                
+                VStack(alignment: .leading, spacing: 10){
+                    Text("EMAIL")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    TextField("Enter your email", text: $viewModel.email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                }
+                .listRowSeparator(.hidden)
+                
+                VStack(alignment: .leading, spacing: 10){
+                    Text("CREATE PASSWORD")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    SecureField("Enter your password", text: $viewModel.password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                }
+                .listRowSeparator(.hidden)
+                
+                VStack(alignment: .leading, spacing: 10){
+                    Text("CONFIRM PASSWORD")
+                        .foregroundColor(.black)
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    SecureField("Confirm your password", text: $viewModel.confirmPassword)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                }
+                .listRowSeparator(.hidden)
+                
+                Spacer()
+                    .listRowSeparator(.hidden)
+                
+                // Placeholder for button
+                StyledButton(title: "Register", bg: .blue) {
+                    
+                }
+                
+                // Fix spacing
+                
+                
             }
             .foregroundColor(.gray)
             .scrollContentBackground(.hidden)
-            .padding(.bottom, 100)
+            .padding(.bottom, 20)
+            
             
         }
     }
