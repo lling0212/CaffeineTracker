@@ -29,9 +29,12 @@ struct RegisterView: View {
                         .foregroundColor(.black)
                         .font(Font.custom("Nexa-Trial-Regular", size: 12))
                     TextField("Enter your first name", text: $viewModel.firstName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 40))
                         .autocorrectionDisabled()
                         .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                        
                 }
                 .listRowSeparator(.hidden)
                 
@@ -83,7 +86,7 @@ struct RegisterView: View {
                     .listRowSeparator(.hidden)
                 
                 // Placeholder for button
-                StyledButton(title: "Register", bg: .blue) {
+                StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     
                 }
                 

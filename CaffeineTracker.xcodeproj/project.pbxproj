@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9103CAE42AE967BD00C0057D /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103CAE32AE967BD00C0057D /* LoginViewViewModel.swift */; };
+		9103CAE72AE9740B00C0057D /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103CAE62AE9740B00C0057D /* TextFieldView.swift */; };
 		91774C7F2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C6D2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf */; };
 		91774C802AE17E0A0078818A /* Nexa-Trial-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C6E2AE17E0A0078818A /* Nexa-Trial-Heavy.ttf */; };
 		91774C812AE17E0A0078818A /* Nexa-Trial-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91774C6F2AE17E0A0078818A /* Nexa-Trial-Thin.ttf */; };
@@ -87,6 +89,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9103CAE32AE967BD00C0057D /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		9103CAE62AE9740B00C0057D /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		91774C6D2AE17E0A0078818A /* Nexa-Trial-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-ExtraBold.ttf"; sourceTree = "<group>"; };
 		91774C6E2AE17E0A0078818A /* Nexa-Trial-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Heavy.ttf"; sourceTree = "<group>"; };
 		91774C6F2AE17E0A0078818A /* Nexa-Trial-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Trial-Thin.ttf"; sourceTree = "<group>"; };
@@ -179,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9103CAE52AE973E400C0057D /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */,
+				9103CAE62AE9740B00C0057D /* TextFieldView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
 		91774C6C2AE17E0A0078818A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,8 +271,8 @@
 				91D3CE7E2AE0A73D007A1EB9 /* WelcomeView.swift */,
 				91D3CE782AE0A6D8007A1EB9 /* LoginView.swift */,
 				91D3CE7A2AE0A6E8007A1EB9 /* RegisterView.swift */,
+				9103CAE52AE973E400C0057D /* ViewComponents */,
 				91B2C1B92AE7663300F4B222 /* HeaderView.swift */,
-				91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +288,7 @@
 				91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */,
 				91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */,
 				91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */,
+				9103CAE32AE967BD00C0057D /* LoginViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -431,6 +445,7 @@
 				91D3CE752AE0A670007A1EB9 /* DrinkListView.swift in Sources */,
 				91B2C1BC2AE76BC500F4B222 /* RegisterViewViewModel.swift in Sources */,
 				91D3CE1F2AE09A2F007A1EB9 /* MainView.swift in Sources */,
+				9103CAE72AE9740B00C0057D /* TextFieldView.swift in Sources */,
 				91D3CE732AE0A657007A1EB9 /* NewJournalItemView.swift in Sources */,
 				91D3CE712AE0A636007A1EB9 /* JournalItemView.swift in Sources */,
 				91D3CE6B2AE0A5B2007A1EB9 /* SummaryView.swift in Sources */,
@@ -447,6 +462,7 @@
 				91D3CE7D2AE0A712007A1EB9 /* NewDrinkItemView.swift in Sources */,
 				91D3CE7B2AE0A6E8007A1EB9 /* RegisterView.swift in Sources */,
 				91D3CE772AE0A691007A1EB9 /* DrinkListItemView.swift in Sources */,
+				9103CAE42AE967BD00C0057D /* LoginViewViewModel.swift in Sources */,
 				91D3CE1D2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift in Sources */,
 				91D3CE8B2AE0A830007A1EB9 /* SummaryViewViewModel.swift in Sources */,
 				91D3CE912AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift in Sources */,

@@ -24,8 +24,9 @@ struct StyledButton: View {
                     .font(Font.custom("Nexa-Trial-Bold", size: 14))
                     
             }
-            .frame(height: 45)
+            
         }
+        .frame(height: 45)
     }
 }
 
