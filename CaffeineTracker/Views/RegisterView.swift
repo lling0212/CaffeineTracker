@@ -69,7 +69,7 @@ struct RegisterView: View {
                     isSecure: true)
                 
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
-                    
+                    viewModel.register()
                 }
                 
                 

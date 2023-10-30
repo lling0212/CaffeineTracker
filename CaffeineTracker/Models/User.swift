@@ -12,6 +12,7 @@ struct User: Codable {
     let firstName: String
     let lastName: String
     let email: String
+    //var image: uiImage
 //    private var imageName: String
 //    let image: Image {
 //        Image(imageName)

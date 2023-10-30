@@ -19,6 +19,7 @@ class RegisterViewViewModel: ObservableObject {
     init() {}
     
     // func: register
+    func register() {}
     
     // func: insert user record
     

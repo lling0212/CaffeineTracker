@@ -9,28 +9,46 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            
+        NavigationView{
+            VStack(alignment: .leading) {
+                
                 // add header graphics
+                // edit button height and spacing
+                
+//                Spacer()
                 
                 HeaderView(title: "Caffeine Tracker",
                            subtitle: "Track your daily caffeine intake!")
                 .padding()
                 .listRowSeparator(.hidden)
                 
-                StyledButton(title: "Login", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
-                    
+                
+                NavigationLink(destination: LoginView()) {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color(hue: 1.0, saturation: 0.61, brightness: 0.856))
+                        Text("Login")
+                            .foregroundStyle(.white)
+                            .font(Font.custom("Montserrat-SemiBold", size: 14))
+                    }
                 }
+                .frame(height:45)
                 .padding()
                 
-                StyledButton(title: "Register", bg: Color(.gray)) {
-                    
+                NavigationLink(destination: RegisterView()) {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(.gray)
+                        Text("Register")
+                            .foregroundStyle(.white)
+                            .font(Font.custom("Montserrat-SemiBold", size: 14))
+                    }
                 }
+                .frame(height:50)
                 .padding()
                 
-            
-            
-            
+                
+            }
         }
     }
     

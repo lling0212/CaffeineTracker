@@ -16,9 +16,12 @@ class LoginViewViewModel: ObservableObject {
     init() {}
     
     // func login
+    func login() {}
     
     // func validate
+    func validate() {}
     
     // configure email link sign in
+    
     
 }
