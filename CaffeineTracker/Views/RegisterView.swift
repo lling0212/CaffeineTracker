@@ -11,14 +11,27 @@ struct RegisterView: View {
     @State var viewModel = RegisterViewViewModel()
     
     var body: some View {
-        VStack(alignment: .listRowSeparatorLeading) {
+        VStack(alignment: .leading) {
             
             Form {
                 
                 // Tap to add profile photo
                 // centered circle image
                 
+                // binding var understanding: should it always be a
+                // string or be based on type of that field of the
+                // data model?
+                
                 // fix font
+                HStack {
+                    Spacer()
+                    Button {
+                        
+                    } label: {
+                        ProfilePicView()
+                    }
+                    Spacer()
+                }
                 
                 HeaderView(title: "Register",
                            subtitle: "Enter your information")
@@ -29,6 +42,7 @@ struct RegisterView: View {
                     sublabel: "Enter your given name",
                     viewModField: $viewModel.firstName,
                     isSecure: false)
+            
                 
                 TextFieldView(
                     label: "LAST NAME",
@@ -53,9 +67,6 @@ struct RegisterView: View {
                     sublabel: "Re-enter your password",
                     viewModField: $viewModel.password,
                     isSecure: true)
-                
-                Spacer()
-                    .listRowSeparator(.hidden)
                 
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     

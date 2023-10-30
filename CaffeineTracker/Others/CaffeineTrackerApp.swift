@@ -17,7 +17,7 @@ struct CaffeineTrackerApp: App {
         FontBlaster.blast() //{ (fonts) in
             //print(fonts) // fonts is an array of Strings containing font names
         //}
-        UIFont.overrideInitialize()
+//        UIFont.overrideInitialize()
         
     }
     

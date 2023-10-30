@@ -11,40 +11,29 @@ struct LoginView: View {
     @State var viewModel = LoginViewViewModel()
     
     var body: some View {
-        VStack(alignment: .listRowSeparatorLeading) {
+        VStack(alignment: .leading) {
             
             Form {
                 
                 // fix font
                 // add header graphics
-                // replace w defined textfield structs
+                // 
                 
                 HeaderView(title: "Login",
                            subtitle: "Login to continue using the app")
                 .listRowSeparator(.hidden)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("EMAIL")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    TextField("Enter your email", text: $viewModel.email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                }
-                .listRowSeparator(.hidden)
+                TextFieldView(
+                    label: "Email",
+                    sublabel: "Enter your email",
+                    viewModField: $viewModel.email,
+                    isSecure: false)
                 
-                VStack(alignment: .leading, spacing: 10){
-                    Text("PASSWORD")
-                        .foregroundColor(.black)
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                    SecureField("Enter your password", text: $viewModel.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .font(Font.custom("Nexa-Trial-Regular", size: 12))
-                }
-                .listRowSeparator(.hidden)
-                
+                TextFieldView(
+                    label: "Password",
+                    sublabel: "Enter your password",
+                    viewModField: $viewModel.email,
+                    isSecure: false)
                 
                 Spacer()
                     .listRowSeparator(.hidden)

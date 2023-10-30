@@ -21,12 +21,12 @@ struct StyledButton: View {
                     .foregroundColor(bg)
                 Text(title)
                     .foregroundStyle(.white)
-                    .font(Font.custom("Nexa-Trial-Bold", size: 14))
+                    .font(Font.custom("Montserrat-SemiBold", size: 14))
                     
             }
             
         }
-        .frame(height: 45)
+        .frame(height: 40)
     }
 }
 

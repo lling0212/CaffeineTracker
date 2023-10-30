@@ -14,11 +14,11 @@ struct HeaderView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Text(title)
-                .font(Font.custom("Nexa-Trial-Bold", size: 36))
+                .font(Font.custom("Montserrat-SemiBold", size: 36))
                 .foregroundColor(.black)
 
             Text(subtitle)
-                .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                .font(Font.custom("Montserrat-Regular", size: 12))
                 .foregroundColor(.gray)
             
         }

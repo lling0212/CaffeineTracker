@@ -14,23 +14,23 @@ struct TextFieldView: View {
     let isSecure: Bool
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10){
+        VStack(alignment: .leading, spacing: 5){
             Text(label)
                 .foregroundColor(.black)
-                .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                .font(Font.custom("Montserrat-SemiBold", size: 12))
             
             if isSecure {
                 SecureField(sublabel, text: $viewModField)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 40))
+                    .padding(8)
+                    .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
                     .autocorrectionDisabled()
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    .font(Font.custom("Montserrat-SemiBold", size: 12))
             } else {
                 TextField(sublabel, text: $viewModField)
                     .textFieldStyle(PlainTextFieldStyle())
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 40))
+                    .padding(8)
+                    .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
                     .autocorrectionDisabled()
                     .font(Font.custom("Nexa-Trial-Regular", size: 12))
             }
