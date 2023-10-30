@@ -18,8 +18,12 @@ struct ProfilePicker: View {
             selection: $selectedItem,
             matching: .images,
             photoLibrary: .shared()) {
-//                ProfilePicView()
-                Text("Select")
+                if let selectedImageData,
+                   let uiImage = UIImage(data: selectedImageData) {
+                    ProfilePicView(image: Image(uiImage: uiImage))
+                } else {
+                    ProfilePicView()
+                }
             }
             .onChange(of: selectedItem) { oldItem, newItem in
                 Task {
@@ -30,13 +34,7 @@ struct ProfilePicker: View {
                 }
             }
 
-        if let selectedImageData,
-           let uiImage = UIImage(data: selectedImageData) {
-            Image(uiImage: uiImage)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 250, height: 250)
-        }
+        
     }
 }
 

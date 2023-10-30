@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct RegisterView: View {
     @State var viewModel = RegisterViewViewModel()
+    @State private var selectedItem: PhotosPickerItem? = nil
+    @State private var selectedImageData: Data? = nil
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -16,7 +19,6 @@ struct RegisterView: View {
             Form {
                 
                 // Tap to add profile photo
-                // centered circle image
                 
                 // binding var understanding: should it always be a
                 // string or be based on type of that field of the
@@ -25,11 +27,26 @@ struct RegisterView: View {
                 // fix font
                 HStack {
                     Spacer()
-                    Button {
-                        
-                    } label: {
-                        ProfilePicView()
-                    }
+                    PhotosPicker(
+                        selection: $selectedItem,
+                        matching: .images,
+                        photoLibrary: .shared()) {
+                            if let selectedImageData,
+                               let uiImage = UIImage(data: selectedImageData) {
+                                ProfilePicView(image: Image(uiImage: uiImage))
+                            } else {
+                                ProfilePicView()
+                            }
+                        }
+                        .onChange(of: selectedItem) { oldItem, newItem in
+                            Task {
+                                // Retrieve selected asset in the form of Data
+                                if let data = try? await newItem?.loadTransferable(type: Data.self) {
+                                    selectedImageData = data
+                                }
+                            }
+                        }
+
                     Spacer()
                 }
                 
