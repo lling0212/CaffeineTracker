@@ -29,6 +29,7 @@
 		911DBEF82AEF538900632D00 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE62AEF538900632D00 /* Montserrat-Medium.ttf */; };
 		911DBEF92AEF538900632D00 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE72AEF538900632D00 /* Montserrat-Black.ttf */; };
 		911DBEFA2AEF538900632D00 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE82AEF538900632D00 /* Montserrat-LightItalic.ttf */; };
+		9171F6942AF0C1130072EA67 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171F6932AF0C1130072EA67 /* Extensions.swift */; };
 		91774C932AE189270078818A /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C922AE189270078818A /* FontBlaster.swift */; };
 		91774C952AE18A2C0078818A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C942AE18A2C0078818A /* FontHelper.swift */; };
 		91B2C1BA2AE7663300F4B222 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1B92AE7663300F4B222 /* HeaderView.swift */; };
@@ -113,6 +114,7 @@
 		911DBEE62AEF538900632D00 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		911DBEE72AEF538900632D00 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		911DBEE82AEF538900632D00 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		9171F6932AF0C1130072EA67 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91774C912AE1826D0078818A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91774C922AE189270078818A /* FontBlaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontBlaster.swift; sourceTree = "<group>"; };
 		91774C942AE18A2C0078818A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 				91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */,
 				91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */,
 				9103CAE32AE967BD00C0057D /* LoginViewViewModel.swift */,
+				9171F6932AF0C1130072EA67 /* Extensions.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				9103CAE42AE967BD00C0057D /* LoginViewViewModel.swift in Sources */,
 				91D3CE1D2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift in Sources */,
 				91D3CE8B2AE0A830007A1EB9 /* SummaryViewViewModel.swift in Sources */,
+				9171F6942AF0C1130072EA67 /* Extensions.swift in Sources */,
 				91D3CE912AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift in Sources */,
 				91D3CE7F2AE0A73D007A1EB9 /* WelcomeView.swift in Sources */,
 			);
