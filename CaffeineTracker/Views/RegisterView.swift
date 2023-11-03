@@ -34,6 +34,9 @@ struct RegisterView: View {
                             if let selectedImageData,
                                let uiImage = UIImage(data: selectedImageData) {
                                 ProfilePicView(image: Image(uiImage: uiImage))
+                                    .onAppear {
+                                        viewModel.profilepic = uiImage
+                                    }
                             } else {
                                 ProfilePicView()
                             }
@@ -43,6 +46,7 @@ struct RegisterView: View {
                                 // Retrieve selected asset in the form of Data
                                 if let data = try? await newItem?.loadTransferable(type: Data.self) {
                                     selectedImageData = data
+ 
                                 }
                             }
                         }
@@ -82,7 +86,7 @@ struct RegisterView: View {
                 TextFieldView(
                     label: "CONFIRM PASSWORD",
                     sublabel: "Re-enter your password",
-                    viewModField: $viewModel.password,
+                    viewModField: $viewModel.confirmPassword,
                     isSecure: true)
                 
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {

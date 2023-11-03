@@ -12,6 +12,6 @@ struct User: Codable {
     let firstName: String
     let lastName: String
     let email: String
-    //let profilePic: Image
     let joined: TimeInterval
+    let profileURL: URL?
 }

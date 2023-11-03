@@ -32,7 +32,7 @@ struct TextFieldView: View {
                     .padding(8)
                     .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
                     .autocorrectionDisabled()
-                    .font(Font.custom("Nexa-Trial-Regular", size: 12))
+                    .font(Font.custom("Montserrat-SemiBold", size: 12))
             }
             
         }

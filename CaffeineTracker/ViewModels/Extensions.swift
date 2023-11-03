@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+import Firebase
 
 // understand details of Encodable
 
@@ -26,3 +28,15 @@ extension Encodable {
         
     }
 }
+
+//class FirebaseManager: NSObject {
+//    let storage: Storage
+//    
+//    static let shared = FirebaseManager()
+//    
+//    override init() {
+//        self.storage = Storage.storage()
+//    }
+//    
+//}
+

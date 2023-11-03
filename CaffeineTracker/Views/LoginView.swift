@@ -48,8 +48,19 @@ struct LoginView: View {
             }
             .foregroundColor(.gray)
             .scrollContentBackground(.hidden)
-            .padding(.bottom, 20)
             
+            
+            HStack{
+                Spacer()
+                Text(viewModel.error)
+                    .foregroundColor(.red)
+//                    .background(Color(.blue))
+                    .padding()
+                    .offset(y: -25)
+                    .frame(height: 20)
+                    .font(Font.custom("Montserrat-Regular", size: 12))
+                Spacer()
+            }
             
         }
     }
