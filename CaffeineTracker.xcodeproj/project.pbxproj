@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9103CAE42AE967BD00C0057D /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103CAE32AE967BD00C0057D /* LoginViewViewModel.swift */; };
 		9103CAE72AE9740B00C0057D /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9103CAE62AE9740B00C0057D /* TextFieldView.swift */; };
+		91113B902AFB03B20012E0E4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91113B8F2AFB03B20012E0E4 /* AccountView.swift */; };
 		911DBED42AEF35A700632D00 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911DBED32AEF35A700632D00 /* ProfilePicView.swift */; };
 		911DBED62AEF402400632D00 /* ProfilePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911DBED52AEF402400632D00 /* ProfilePicker.swift */; };
 		911DBEE92AEF538900632D00 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBED72AEF538800632D00 /* Montserrat-ExtraBold.ttf */; };
@@ -29,6 +30,7 @@
 		911DBEF82AEF538900632D00 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE62AEF538900632D00 /* Montserrat-Medium.ttf */; };
 		911DBEF92AEF538900632D00 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE72AEF538900632D00 /* Montserrat-Black.ttf */; };
 		911DBEFA2AEF538900632D00 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE82AEF538900632D00 /* Montserrat-LightItalic.ttf */; };
+		915081AC2AFA1075004E79A8 /* CustomtabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915081AB2AFA1075004E79A8 /* CustomtabBar.swift */; };
 		9171F6942AF0C1130072EA67 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171F6932AF0C1130072EA67 /* Extensions.swift */; };
 		91774C932AE189270078818A /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C922AE189270078818A /* FontBlaster.swift */; };
 		91774C952AE18A2C0078818A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C942AE18A2C0078818A /* FontHelper.swift */; };
@@ -69,7 +71,7 @@
 		91D3CE622AE09E5E007A1EB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D3CE612AE09E5D007A1EB9 /* GoogleService-Info.plist */; };
 		91D3CE692AE0A593007A1EB9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE682AE0A593007A1EB9 /* ProfileView.swift */; };
 		91D3CE6B2AE0A5B2007A1EB9 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE6A2AE0A5B2007A1EB9 /* SummaryView.swift */; };
-		91D3CE6D2AE0A5C6007A1EB9 /* CaldendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE6C2AE0A5C6007A1EB9 /* CaldendarView.swift */; };
+		91D3CE6D2AE0A5C6007A1EB9 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE6C2AE0A5C6007A1EB9 /* CalendarView.swift */; };
 		91D3CE6F2AE0A609007A1EB9 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE6E2AE0A609007A1EB9 /* JournalView.swift */; };
 		91D3CE712AE0A636007A1EB9 /* JournalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE702AE0A636007A1EB9 /* JournalItemView.swift */; };
 		91D3CE732AE0A657007A1EB9 /* NewJournalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE722AE0A657007A1EB9 /* NewJournalItemView.swift */; };
@@ -94,6 +96,7 @@
 /* Begin PBXFileReference section */
 		9103CAE32AE967BD00C0057D /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		9103CAE62AE9740B00C0057D /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		91113B8F2AFB03B20012E0E4 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		911DBED32AEF35A700632D00 /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
 		911DBED52AEF402400632D00 /* ProfilePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicker.swift; sourceTree = "<group>"; };
 		911DBED72AEF538800632D00 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		911DBEE62AEF538900632D00 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		911DBEE72AEF538900632D00 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		911DBEE82AEF538900632D00 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		915081AB2AFA1075004E79A8 /* CustomtabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomtabBar.swift; sourceTree = "<group>"; };
 		9171F6932AF0C1130072EA67 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91774C912AE1826D0078818A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91774C922AE189270078818A /* FontBlaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontBlaster.swift; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 		91D3CE612AE09E5D007A1EB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91D3CE682AE0A593007A1EB9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		91D3CE6A2AE0A5B2007A1EB9 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
-		91D3CE6C2AE0A5C6007A1EB9 /* CaldendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaldendarView.swift; sourceTree = "<group>"; };
+		91D3CE6C2AE0A5C6007A1EB9 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		91D3CE6E2AE0A609007A1EB9 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		91D3CE702AE0A636007A1EB9 /* JournalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalItemView.swift; sourceTree = "<group>"; };
 		91D3CE722AE0A657007A1EB9 /* NewJournalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJournalItemView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 			children = (
 				91B2C1B92AE7663300F4B222 /* HeaderView.swift */,
 				91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */,
+				915081AB2AFA1075004E79A8 /* CustomtabBar.swift */,
 				911DBED32AEF35A700632D00 /* ProfilePicView.swift */,
 				9103CAE62AE9740B00C0057D /* TextFieldView.swift */,
 			);
@@ -267,12 +272,13 @@
 			isa = PBXGroup;
 			children = (
 				91D3CE1E2AE09A2F007A1EB9 /* MainView.swift */,
+				91113B8F2AFB03B20012E0E4 /* AccountView.swift */,
 				91D3CE682AE0A593007A1EB9 /* ProfileView.swift */,
 				91D3CE6A2AE0A5B2007A1EB9 /* SummaryView.swift */,
 				91D3CE742AE0A670007A1EB9 /* DrinkListView.swift */,
 				91D3CE762AE0A691007A1EB9 /* DrinkListItemView.swift */,
 				91D3CE7C2AE0A712007A1EB9 /* NewDrinkItemView.swift */,
-				91D3CE6C2AE0A5C6007A1EB9 /* CaldendarView.swift */,
+				91D3CE6C2AE0A5C6007A1EB9 /* CalendarView.swift */,
 				91D3CE6E2AE0A609007A1EB9 /* JournalView.swift */,
 				91D3CE702AE0A636007A1EB9 /* JournalItemView.swift */,
 				91D3CE722AE0A657007A1EB9 /* NewJournalItemView.swift */,
@@ -454,6 +460,7 @@
 				91D3CE892AE0A824007A1EB9 /* ProfileViewViewModel.swift in Sources */,
 				91D3CE752AE0A670007A1EB9 /* DrinkListView.swift in Sources */,
 				91B2C1BC2AE76BC500F4B222 /* RegisterViewViewModel.swift in Sources */,
+				915081AC2AFA1075004E79A8 /* CustomtabBar.swift in Sources */,
 				91D3CE1F2AE09A2F007A1EB9 /* MainView.swift in Sources */,
 				9103CAE72AE9740B00C0057D /* TextFieldView.swift in Sources */,
 				91D3CE732AE0A657007A1EB9 /* NewJournalItemView.swift in Sources */,
@@ -461,13 +468,14 @@
 				91D3CE6B2AE0A5B2007A1EB9 /* SummaryView.swift in Sources */,
 				91774C952AE18A2C0078818A /* FontHelper.swift in Sources */,
 				91D3CE852AE0A7F2007A1EB9 /* JournalItem.swift in Sources */,
-				91D3CE6D2AE0A5C6007A1EB9 /* CaldendarView.swift in Sources */,
+				91D3CE6D2AE0A5C6007A1EB9 /* CalendarView.swift in Sources */,
 				91D3CE692AE0A593007A1EB9 /* ProfileView.swift in Sources */,
 				91D3CE8F2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift in Sources */,
 				91D3CE812AE0A7BA007A1EB9 /* User.swift in Sources */,
 				91D3CE792AE0A6D8007A1EB9 /* LoginView.swift in Sources */,
 				91D3CE932AE0A87F007A1EB9 /* CalendarViewViewModel.swift in Sources */,
 				91D3CE8D2AE0A847007A1EB9 /* DrinkListViewViewModel.swift in Sources */,
+				91113B902AFB03B20012E0E4 /* AccountView.swift in Sources */,
 				91B2C1BA2AE7663300F4B222 /* HeaderView.swift in Sources */,
 				91D3CE7D2AE0A712007A1EB9 /* NewDrinkItemView.swift in Sources */,
 				911DBED42AEF35A700632D00 /* ProfilePicView.swift in Sources */,

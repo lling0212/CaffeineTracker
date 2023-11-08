@@ -23,7 +23,7 @@ struct CaffeineTrackerApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

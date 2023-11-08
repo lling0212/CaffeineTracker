@@ -7,33 +7,32 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    @StateObject var viewModel = MainViewViewModel()
+    
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-//                .font(.mySystemFont(ofSize: 16))
-//                .bold()
-            
+        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
+            AccountView()
+        } else {
+            NavigationView {
+                WelcomeView()
+            }
         }
-        .padding()
     }
-    
-    
-    
-    init() {
-//        for name in UIFont.familyNames {
-//            print(name)
-//            
-//            for fontName in UIFont.fontNames(forFamilyName: name) {
-//                
-//                print("-- \(fontName)")
-//            }
-//            
-//        }
-    }
-    
 }
+    
+    
+    
 
 #Preview {
-    ContentView()
+    MainView()
 }
+
+//
+// in init
+//        for name in UIFont.familyNames {
+//            print(name)
+//            for fontName in UIFont.fontNames(forFamilyName: name) {
+//                print("-- \(fontName)")
+//            }
+//        }

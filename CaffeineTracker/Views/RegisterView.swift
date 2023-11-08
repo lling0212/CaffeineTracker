@@ -17,14 +17,12 @@ struct RegisterView: View {
         VStack(alignment: .leading) {
             
             Form {
-                
-                // Tap to add profile photo
-                
+                 
+                // need to fix error msg view
                 // binding var understanding: should it always be a
                 // string or be based on type of that field of the
                 // data model?
                 
-                // fix font
                 HStack {
                     Spacer()
                     PhotosPicker(
