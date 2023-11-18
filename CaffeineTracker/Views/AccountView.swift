@@ -9,33 +9,44 @@ import SwiftUI
 
 struct AccountView: View {
     
+    @State var selectedTab: String = "heart"
+    @StateObject var viewModel: AccountViewViewModel
     
     init() {
         UITabBar.appearance().isHidden = true
-        
+        self._viewModel = StateObject(wrappedValue: AccountViewViewModel())
     }
     
-    @State var selectedTab: String = "heart"
-    
     var body: some View {
-        VStack(spacing: 0) {
-            TabView(selection: $selectedTab){
+        NavigationView {
+            VStack(spacing: 0) {
+                TabView(selection: $selectedTab){
+                    
+                    SummaryView()
+                        .tag("heart")
+                    
+                    CalendarView()
+                        .tag("calendar")
+                    
+                    JournalView()
+                        .tag("photo.on.rectangle")
+                    
+                    ProfileView()
+                        .tag("person.crop.square")
+                    
+                }
+    //            .frame(height:670)
                 
-                SummaryView()
-                    .tag("heart")
-                
-                CalendarView()
-                    .tag("calendar")
-                
-                JournalView()
-                    .tag("photo.on.rectangle")
-                
-                ProfileView()
-                    .tag("person.crop.square")
-                
+                CustomtabBar(selectedTab: $selectedTab, viewModel: viewModel)
+                    
             }
-            CustomtabBar(selectedTab: $selectedTab)
+            .edgesIgnoringSafeArea(.bottom)
+            .sheet(isPresented: $viewModel.showNewItemView, content : {
+                NewDrinkItemView(newItemPresented: $viewModel.showNewItemView)
+            })
         }
+        
+        
     }
 }
 

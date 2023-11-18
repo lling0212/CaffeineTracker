@@ -28,7 +28,7 @@ struct MainView: View {
     MainView()
 }
 
-//
+// FOR LOOKING UP FONTS
 // in init
 //        for name in UIFont.familyNames {
 //            print(name)

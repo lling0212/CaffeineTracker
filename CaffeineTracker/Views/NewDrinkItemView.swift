@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct NewDrinkItemView: View {
+    @StateObject var viewModel = NewDrinkItemViewViewModel()
+    @Binding var newItemPresented: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Add a new drink!")
     }
 }
 
 #Preview {
-    NewDrinkItemView()
+    NewDrinkItemView(newItemPresented: Binding(get: {
+        return true
+    }, set: { _ in}))
 }
