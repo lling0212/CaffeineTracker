@@ -35,7 +35,6 @@ struct AccountView: View {
                         .tag("person.crop.square")
                     
                 }
-    //            .frame(height:670)
                 
                 CustomtabBar(selectedTab: $selectedTab, viewModel: viewModel)
                     

@@ -32,8 +32,8 @@ struct LoginView: View {
                 TextFieldView(
                     label: "Password",
                     sublabel: "Enter your password",
-                    viewModField: $viewModel.email,
-                    isSecure: false)
+                    viewModField: $viewModel.password,
+                    isSecure: true)
                 
                 Spacer()
                     .listRowSeparator(.hidden)

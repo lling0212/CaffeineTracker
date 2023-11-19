@@ -16,12 +16,16 @@ class LoginViewViewModel: ObservableObject {
     init() {}
     
     func login() {
-        print("login() called")
         guard validate() else {
             return
         }
         
-        Auth.auth().signIn(withEmail: email, password: password)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            guard let strongSelf = self else {
+                return
+            }
+        }
     }
     
     func validate() -> Bool {
@@ -31,7 +35,6 @@ class LoginViewViewModel: ObservableObject {
             error = "Please fill in all fields"
             return false
         }
-        print("Called")
         
         guard email.contains("@") && email.contains(".") else {
             error = "Please enter valid email"
