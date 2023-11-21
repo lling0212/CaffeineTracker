@@ -8,10 +8,12 @@
 import FirebaseAuth
 import Foundation
 
+// fix switch cases for error codes 
+
 class LoginViewViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
-    @Published var error = "i'm an error msg!"
+    @Published var errormsg = ""
     
     init() {}
     
@@ -25,19 +27,37 @@ class LoginViewViewModel: ObservableObject {
             guard let strongSelf = self else {
                 return
             }
+            
+            if let error = error {
+                let errCode = (error as NSError).code
+                
+                switch errCode {
+                case AuthErrorCode.wrongPassword.rawValue:
+                    strongSelf.errormsg = "Incorrect password"
+                case AuthErrorCode.userNotFound.rawValue:
+                    strongSelf.errormsg = "User not found"
+                default:
+                    strongSelf.errormsg = "An error occurred"
+                }
+                
+            }
         }
+        
     }
     
     func validate() -> Bool {
-        error = ""
+        
+        errormsg = ""
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else {
-            error = "Please fill in all fields"
+            objectWillChange.send()
+            errormsg = "Please fill in all fields"
             return false
         }
         
         guard email.contains("@") && email.contains(".") else {
-            error = "Please enter valid email"
+            objectWillChange.send()
+            errormsg = "Please enter valid email"
             return false
         }
         

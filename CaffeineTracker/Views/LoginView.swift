@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var viewModel = LoginViewViewModel()
+    @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -52,7 +52,7 @@ struct LoginView: View {
             
             HStack{
                 Spacer()
-                Text(viewModel.error)
+                Text(viewModel.errormsg)
                     .foregroundColor(.red)
 //                    .background(Color(.blue))
                     .padding()

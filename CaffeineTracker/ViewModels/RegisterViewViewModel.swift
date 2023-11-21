@@ -30,10 +30,8 @@ class RegisterViewViewModel: ObservableObject {
     
     // func: register
     func register() {
-        print("Trying to register")
         
         guard validate() else {
-            print("Validation failed")
             return
         }
         
