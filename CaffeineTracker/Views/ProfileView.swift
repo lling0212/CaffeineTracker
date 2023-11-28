@@ -7,12 +7,15 @@
 
 import SwiftUI
 import PhotosUI
+import FirebaseStorage
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewViewModel()
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
     @State var showingAlert: Bool = false
+    @State private var user: User? = nil
+    
     
     var body: some View {
         NavigationView {
@@ -28,15 +31,26 @@ struct ProfileView: View {
         .onAppear{
             viewModel.fetchUser()
         }
+        .onChange(of: viewModel.user) { newUser in
+                user = newUser
+                
+            }
     }
     
     @ViewBuilder
     func profile(user: User) -> some View {
+        
         VStack(alignment: .leading) {
             Text("My Profile")
                 .font(Font.custom("Montserrat-SemiBold", size: 36))
                 .foregroundColor(.black)
         }
+//        .onAppear{
+//            print("User")
+//            print(user.firstName)
+//            print(user.profileURL)
+//        }
+        
         
         VStack{
             
@@ -48,8 +62,18 @@ struct ProfileView: View {
                        let uiImage = UIImage(data: selectedImageData) {
                         ProfilePicView(image: Image(uiImage: uiImage))
                             .onAppear {
-                                viewModel.profilepic = uiImage
+//                                viewModel.profilepic = uiImage
                             }
+                    } else if user.profileURL.count > 5 {
+                        // display with user's profile
+                        if let profilepic = viewModel.profilepic {
+                            ProfilePicView(image: Image(uiImage: profilepic))
+                        } else {
+                            ProfilePicView()
+                                .onAppear{
+//                                    print("no profile")
+                                }
+                        }
                     } else {
                         ProfilePicView()
                     }
@@ -60,6 +84,7 @@ struct ProfileView: View {
                         if let data = try? await newItem?.loadTransferable(type: Data.self) {
                             selectedImageData = data
                             showingAlert = true
+                            
                         }
                     }
                 }
@@ -70,6 +95,7 @@ struct ProfileView: View {
                 .foregroundColor(.black)
                 .padding()
             
+//            Text(user.profileURL!.absoluteString)
             
             Text("Tracking caffeine intake since: ")
                 .font(Font.custom("Montserrat-Regular", size: 12))

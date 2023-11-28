@@ -22,7 +22,7 @@ class RegisterViewViewModel: ObservableObject {
     // @Published var loginStatus = ""
     @Published var userMsg = ""
     @Published var profilepic: UIImage?
-    @Published var profileURL: URL?
+    @Published var profileURL = ""
     
     init() {
         userMsg = ""
@@ -43,9 +43,9 @@ class RegisterViewViewModel: ObservableObject {
                 
             self?.persistImageToStorage { (url) in
                 if let url = url {
-                    self?.insertUserRecord(id: userId, profileURL: url)
+                    self?.insertUserRecord(id: userId, profileURL: url.absoluteString)
                 } else {
-                    self?.insertUserRecord(id: userId, profileURL: nil)
+                    self?.insertUserRecord(id: userId, profileURL: "")
                 }
                 
             }
@@ -95,7 +95,7 @@ class RegisterViewViewModel: ObservableObject {
         }}
     
     
-    private func insertUserRecord(id: String, profileURL: URL?) {
+    private func insertUserRecord(id: String, profileURL: String) {
         let newUser = User(id: id,
                            firstName: firstName,
                            lastName: lastName,

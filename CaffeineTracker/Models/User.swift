@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Equatable {
     let id: String
     let firstName: String
     let lastName: String
     let email: String
     let joined: TimeInterval
-    let profileURL: URL?
+    let profileURL: String
 }

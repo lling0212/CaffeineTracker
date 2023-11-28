@@ -9,12 +9,14 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
+import SwiftUI
+
 
 class ProfileViewViewModel: ObservableObject {
     init() {}
     
     @Published var user: User? = nil
-    @Published var profilepic: UIImage?
+    @Published var profilepic: UIImage? = nil
     @Published var profileURL: URL?
     
     func fetchUser() {
@@ -35,13 +37,47 @@ class ProfileViewViewModel: ObservableObject {
                     lastName: data["lastName"] as? String ?? "",
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0,
-                    profileURL: data["profileURL"] as? URL ?? nil
+                    profileURL: data["profileURL"] as? String ?? ""
                 )
+                
+                self?.loadUserProfile { (image) in
+                    if let image = image {
+                        print("image exists")
+                        self?.profilepic = image
+                    } else {
+                        print("no image")
+                    }
+                }
             }
+            
             
         }
         
         
+    }
+    
+    func loadUserProfile(completion: @escaping (UIImage?) -> Void) {
+        print("called loadUserProfile")
+        guard let user = user else {
+            print("no user")
+            completion(nil)
+            return
+        }
+        
+        let profileRef = Storage.storage().reference(forURL: user.profileURL)
+        
+        profileRef.getData(maxSize: 3 * 1024 * 1024) {data, error in
+                if let error = error {
+                    print("error in loadUserProfile")
+                    print(error)
+                    completion(nil)
+                    return
+                } else {
+                    print("no error in loadUserProfile")
+                    completion(UIImage(data: data!))
+                    return
+                }
+            }
     }
     
     func logout() {
