@@ -12,18 +12,19 @@ struct RegisterView: View {
     @State var viewModel = RegisterViewViewModel()
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
+    @State var showingAlert : Bool = false
+    
+    // need to fix strip of white space above keyboard
+    // binding var understanding: should it always be a
+    // string or be based on type of that field of the
+    // data model?
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0.0) {
             
             Form {
-                 
-                // need to fix error msg view
-                // binding var understanding: should it always be a
-                // string or be based on type of that field of the
-                // data model?
                 
-                HStack {
+                HStack(spacing: 0.0) {
                     Spacer()
                     PhotosPicker(
                         selection: $selectedItem,
@@ -44,11 +45,11 @@ struct RegisterView: View {
                                 // Retrieve selected asset in the form of Data
                                 if let data = try? await newItem?.loadTransferable(type: Data.self) {
                                     selectedImageData = data
- 
+                                    showingAlert = true
                                 }
                             }
                         }
-
+                    
                     Spacer()
                 }
                 
@@ -61,7 +62,7 @@ struct RegisterView: View {
                     sublabel: "Enter your given name",
                     viewModField: $viewModel.firstName,
                     isSecure: false)
-            
+                
                 
                 TextFieldView(
                     label: "LAST NAME",
@@ -89,25 +90,34 @@ struct RegisterView: View {
                 
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     viewModel.register()
-                }
-                
-                
+                    }
             }
-            .foregroundColor(.gray)
+            
             .scrollContentBackground(.hidden)
-//            .padding(.bottom, 20)
-            HStack{
+            .alert("Do you want to use selected image as your profile?", isPresented: ($showingAlert)) {
+                Button("Yes") {
+                    showingAlert = false
+                }
+                Button("No") {
+                    selectedItem = nil
+                    selectedImageData = nil
+                    showingAlert = false
+                }
+            }
+            
+            HStack(spacing: 0.0){
                 Spacer()
                 Text(viewModel.userMsg)
                     .foregroundColor(.red)
-//                    .background(Color(.blue))
                     .padding()
                     .offset(y: -25)
                     .frame(height: 20)
                     .font(Font.custom("Montserrat-Regular", size: 12))
                 Spacer()
             }
+            
         }
+        
     }
     
 }

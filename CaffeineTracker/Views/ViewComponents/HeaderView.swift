@@ -15,7 +15,7 @@ struct HeaderView: View {
         VStack(alignment: .leading, spacing: 15) {
             Text(title)
                 .font(Font.custom("Montserrat-SemiBold", size: 36))
-                .foregroundColor(.black)
+//                .foregroundColor(.black)
 
             Text(subtitle)
                 .font(Font.custom("Montserrat-Regular", size: 12))

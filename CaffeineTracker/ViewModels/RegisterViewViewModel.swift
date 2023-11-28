@@ -25,12 +25,11 @@ class RegisterViewViewModel: ObservableObject {
     @Published var profileURL: URL?
     
     init() {
-        userMsg = "No error"
+        userMsg = ""
     }
     
     // func: register
     func register() {
-        
         guard validate() else {
             return
         }

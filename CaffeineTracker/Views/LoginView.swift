@@ -46,7 +46,6 @@ struct LoginView: View {
                 
                 
             }
-            .foregroundColor(.gray)
             .scrollContentBackground(.hidden)
             
             

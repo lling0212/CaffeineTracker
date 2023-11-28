@@ -16,7 +16,7 @@ struct TextFieldView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
             Text(label)
-                .foregroundColor(.black)
+//                .foregroundColor(.black)
                 .font(Font.custom("Montserrat-SemiBold", size: 12))
             
             if isSecure {

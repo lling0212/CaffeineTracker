@@ -12,6 +12,7 @@ struct ProfileView: View {
     @StateObject var viewModel = ProfileViewViewModel()
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
+    @State var showingAlert: Bool = false
     
     var body: some View {
         NavigationView {
@@ -58,7 +59,7 @@ struct ProfileView: View {
                         // Retrieve selected asset in the form of Data
                         if let data = try? await newItem?.loadTransferable(type: Data.self) {
                             selectedImageData = data
-
+                            showingAlert = true
                         }
                     }
                 }
@@ -85,6 +86,18 @@ struct ProfileView: View {
                 viewModel.logout()
             }
             .frame(width: 100)
+        }
+        .alert("Do you want to use selected image as your profile?", isPresented: ($showingAlert)) {
+            Button("Yes") {
+                showingAlert = false
+                viewModel.saveProfilePic()
+            }
+            Button("No") {
+                selectedItem = nil
+                selectedImageData = nil
+                showingAlert = false
+                viewModel.saveProfilePic()
+            }
         }
     }
     

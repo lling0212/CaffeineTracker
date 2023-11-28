@@ -53,7 +53,7 @@ class ProfileViewViewModel: ObservableObject {
         
     }
     
-    func changeProfile() {
+    func saveProfilePic() {
         
     }
     
