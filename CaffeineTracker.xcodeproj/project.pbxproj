@@ -92,6 +92,7 @@
 		91D3CE8F2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE8E2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift */; };
 		91D3CE912AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */; };
 		91D3CE932AE0A87F007A1EB9 /* CalendarViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */; };
+		91DB090B2B182D0800A23014 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DB090A2B182D0800A23014 /* test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		91D3CE8E2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListItemViewViewModel.swift; sourceTree = "<group>"; };
 		91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDrinkItemViewViewModel.swift; sourceTree = "<group>"; };
 		91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewViewModel.swift; sourceTree = "<group>"; };
+		91DB090A2B182D0800A23014 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 				91D3CE722AE0A657007A1EB9 /* NewJournalItemView.swift */,
 				91D3CE7E2AE0A73D007A1EB9 /* WelcomeView.swift */,
 				91D3CE782AE0A6D8007A1EB9 /* LoginView.swift */,
+				91DB090A2B182D0800A23014 /* test.swift */,
 				91D3CE7A2AE0A6E8007A1EB9 /* RegisterView.swift */,
 				911DBED52AEF402400632D00 /* ProfilePicker.swift */,
 				9103CAE52AE973E400C0057D /* ViewComponents */,
@@ -461,6 +464,7 @@
 				91D3CE872AE0A817007A1EB9 /* MainViewViewModel.swift in Sources */,
 				91B2C1BE2AE76DD200F4B222 /* StyledButton.swift in Sources */,
 				91D3CE892AE0A824007A1EB9 /* ProfileViewViewModel.swift in Sources */,
+				91DB090B2B182D0800A23014 /* test.swift in Sources */,
 				91D3CE752AE0A670007A1EB9 /* DrinkListView.swift in Sources */,
 				91B2C1BC2AE76BC500F4B222 /* RegisterViewViewModel.swift in Sources */,
 				915081AC2AFA1075004E79A8 /* CustomtabBar.swift in Sources */,

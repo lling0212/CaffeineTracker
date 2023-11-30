@@ -26,7 +26,7 @@ struct StyledButton: View {
             }
             
         }
-        .frame(height: 40)
+        .frame(width: 325, height: 40)
     }
 }
 

@@ -61,18 +61,12 @@ struct ProfileView: View {
                     if let selectedImageData,
                        let uiImage = UIImage(data: selectedImageData) {
                         ProfilePicView(image: Image(uiImage: uiImage))
-                            .onAppear {
-//                                viewModel.profilepic = uiImage
-                            }
                     } else if user.profileURL.count > 5 {
                         // display with user's profile
                         if let profilepic = viewModel.profilepic {
                             ProfilePicView(image: Image(uiImage: profilepic))
                         } else {
                             ProfilePicView()
-                                .onAppear{
-//                                    print("no profile")
-                                }
                         }
                     } else {
                         ProfilePicView()
@@ -116,13 +110,16 @@ struct ProfileView: View {
         .alert("Do you want to use selected image as your profile?", isPresented: ($showingAlert)) {
             Button("Yes") {
                 showingAlert = false
-                viewModel.saveProfilePic()
+                if let selectedImageData,
+                    let uiImage = UIImage(data: selectedImageData) {
+                    viewModel.newProfilePic = uiImage
+                }
+                viewModel.updateProfilePic()
             }
             Button("No") {
                 selectedItem = nil
                 selectedImageData = nil
                 showingAlert = false
-                viewModel.saveProfilePic()
             }
         }
     }

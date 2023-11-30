@@ -20,10 +20,13 @@ struct RegisterView: View {
     // data model?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0.0) {
+        
+        ZStack {
+            Rectangle()
+                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                .ignoresSafeArea(.all)
             
-            Form {
-                
+            VStack(alignment: .leading, spacing: 0.0) {
                 HStack(spacing: 0.0) {
                     Spacer()
                     PhotosPicker(
@@ -53,9 +56,19 @@ struct RegisterView: View {
                     Spacer()
                 }
                 
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 20)
+                
                 HeaderView(title: "Register",
                            subtitle: "Enter your information")
-                .listRowSeparator(.hidden)
+                .offset(x:39)
+                
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 30)
                 
                 TextFieldView(
                     label: "FIRST NAME",
@@ -90,7 +103,8 @@ struct RegisterView: View {
                 
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     viewModel.register()
-                    }
+                }
+                .offset(x: 39)
             }
             
             .scrollContentBackground(.hidden)
@@ -117,9 +131,7 @@ struct RegisterView: View {
             }
             
         }
-        
     }
-    
 }
 
 

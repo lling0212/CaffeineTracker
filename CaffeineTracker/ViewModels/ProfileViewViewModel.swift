@@ -18,6 +18,7 @@ class ProfileViewViewModel: ObservableObject {
     @Published var user: User? = nil
     @Published var profilepic: UIImage? = nil
     @Published var profileURL: URL?
+    @Published var newProfilePic: UIImage? = nil
     
     func fetchUser() {
         
@@ -89,45 +90,40 @@ class ProfileViewViewModel: ObservableObject {
         
     }
     
-    func saveProfilePic() {
+    func updateProfilePic() {
         
-    }
-    
-    private func persistImageToStorage(completion: @escaping (URL?) -> Void) {
-        print("Image called")
-        //let filename = UUID().uuidString
-        guard let uid = Auth.auth().currentUser?.uid else {
-            print("No uid")
-            completion(nil)
-            return}
+        guard let user = user else {
+            print("no user")
+            return
+        }
         
-        if let profilepic = profilepic {print("Profile pic exists")} else {
+        if let profilepic = newProfilePic {print("Profile pic exists")} else {
             print("Profile pic is nil")
         }
         
-        guard let imageData = profilepic?.jpegData(compressionQuality: 0.5) else {
+        guard let imageData = newProfilePic?.jpegData(compressionQuality: 0.5) else {
             print("Can't load profile")
-            completion(nil)
             return}
-        let ref = Storage.storage().reference(withPath: uid)
+        
+        let ref = Storage.storage().reference(forURL: user.profileURL)
+        
         ref.putData(imageData, metadata: nil) {metadata, err in
             if let err = err {
                 print("Failed to push image to storage: \(err)")
-                completion(nil)
                 return
             }
             
             ref.downloadURL { url, err in
                 if let err = err {
-                print("Failed to retrieve image url: \(err)")
-                completion(nil)
-                return
+                    print("Failed to retrieve image url: \(err)")
+                    return
                 }
                 
                 print("Successfully stored image with url: \(url?.absoluteString ?? "")")
-                completion(url)
             }
-        }}
+        }
+    }
+    
     
     
 }

@@ -32,7 +32,7 @@ struct CustomtabBar: View {
                         .frame(width: 24, height: 24)
                         .foregroundColor(.white)
                         .padding(20)
-                        .background(.pink)
+                        .background(Color(hue: 1.0, saturation: 0.61, brightness: 0.856))
                         .clipShape(Circle())
                         .shadow(color: Color.black.opacity(0.05), radius: 5, x: 5, y: 5)
                         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
@@ -72,7 +72,7 @@ struct TabbarButton: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 28, height: 28)
-                    .foregroundColor(selectedTab == image ? Color(.pink) : Color.gray.opacity(0.6))
+                    .foregroundColor(selectedTab == image ? Color(Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) : Color.gray.opacity(0.6))
                 
                 if selectedTab == image{
                     Circle()

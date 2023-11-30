@@ -11,17 +11,26 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
-        VStack(alignment: .leading) {
+        ZStack{
+            Rectangle()
+                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                .ignoresSafeArea(.all)
             
-            Form {
+            VStack(alignment: .leading) {
                 
-                // fix font
-                // add header graphics
-                // 
-                
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 350)
+                        
                 HeaderView(title: "Login",
                            subtitle: "Login to continue using the app")
-                .listRowSeparator(.hidden)
+                .offset(x:37)
+                
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 30)
                 
                 TextFieldView(
                     label: "Email",
@@ -35,32 +44,33 @@ struct LoginView: View {
                     viewModField: $viewModel.password,
                     isSecure: true)
                 
-                Spacer()
-                    .listRowSeparator(.hidden)
-                
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 10)
                 
                 StyledButton(title: "Login", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     viewModel.login()
                 }
+                .offset(x: 37)
                 
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 30)
                 
-                
+                HStack{
+                    Spacer()
+                    Text(viewModel.errormsg)
+                        .foregroundColor(.red)
+                        .padding()
+                        .offset(y: -25)
+                        .frame(height: 20)
+                        .font(Font.custom("Montserrat-Regular", size: 12))
+                    Spacer()
+                }
+                    
             }
-            .scrollContentBackground(.hidden)
-            
-            
-            HStack{
-                Spacer()
-                Text(viewModel.errormsg)
-                    .foregroundColor(.red)
-//                    .background(Color(.blue))
-                    .padding()
-                    .offset(y: -25)
-                    .frame(height: 20)
-                    .font(Font.custom("Montserrat-Regular", size: 12))
-                Spacer()
-            }
-            
         }
     }
     

@@ -14,29 +14,34 @@ struct TextFieldView: View {
     let isSecure: Bool
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5){
-            Text(label)
-//                .foregroundColor(.black)
-                .font(Font.custom("Montserrat-SemiBold", size: 12))
+//        ZStack {
+//            Rectangle()
+//                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+//                .ignoresSafeArea(.all)
             
-            if isSecure {
-                SecureField(sublabel, text: $viewModField)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .padding(8)
-                    .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
-                    .autocorrectionDisabled()
+            VStack(alignment: .leading, spacing: 5){
+                Text(label)
                     .font(Font.custom("Montserrat-SemiBold", size: 12))
-            } else {
-                TextField(sublabel, text: $viewModField)
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .padding(8)
-                    .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
-                    .autocorrectionDisabled()
-                    .font(Font.custom("Montserrat-SemiBold", size: 12))
+                
+                if isSecure {
+                    SecureField(sublabel, text: $viewModField)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .frame(width: 300, height: 40)
+                        .padding(8)
+                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Montserrat-SemiBold", size: 12))
+                } else {
+                    TextField(sublabel, text: $viewModField)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .frame(width: 300, height: 30)
+                        .padding(8)
+                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
+                        .autocorrectionDisabled()
+                        .font(Font.custom("Montserrat-SemiBold", size: 12))
+                }
             }
-            
-        }
-        .listRowSeparator(.hidden)
+            .frame(width:400)
     }
 }
 

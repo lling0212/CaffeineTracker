@@ -12,17 +12,30 @@ struct HeaderView: View {
     let subtitle: String
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            Text(title)
-                .font(Font.custom("Montserrat-SemiBold", size: 36))
-//                .foregroundColor(.black)
-
-            Text(subtitle)
-                .font(Font.custom("Montserrat-Regular", size: 12))
-                .foregroundColor(.gray)
+//        ZStack{
+//            Rectangle()
+//                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+//                .ignoresSafeArea(.all)
             
-        }
+//            VStack(alignment: .leading, spacing: 15) {
+                Text(title)
+                    .font(Font.custom("Montserrat-SemiBold", size: 36))
+                    
+                //                .foregroundColor(.black)
         
+        Text("")
+            .font(Font.custom("Montserrat-Regular", size: 12))
+            .foregroundColor(.gray)
+        
+                Text(subtitle)
+                    .font(Font.custom("Montserrat-Regular", size: 12))
+                    .foregroundColor(.gray)
+                    
+                
+//            }
+//        }
+//            .frame(width: 300)
+//            .background(.red)
     }
     
 }
