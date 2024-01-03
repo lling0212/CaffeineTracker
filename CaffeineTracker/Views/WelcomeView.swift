@@ -17,10 +17,14 @@ struct WelcomeView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    // add header graphics
-                    // edit button height and spacing
-                    
-                    //                Spacer()
+                    HStack{
+                        Rectangle()
+                            .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                            .frame(width:10)
+                        Image("Square")
+                            .resizable()
+                            .frame(width: 350, height: 350)
+                    }
                     
                     HeaderView(title: "Caffeine Tracker",
                                subtitle: "Track your daily caffeine intake!")
@@ -53,7 +57,9 @@ struct WelcomeView: View {
                     .padding()
                     .offset(y:-10)
                     
-                    
+                    Rectangle()
+                        .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                        .frame(height:15)
                 }
             }
         }
