@@ -22,6 +22,8 @@ struct NewDrinkItemView: View {
                 
                 ScrollView {
                     LazyVStack {
+                        Text("Select a new drink to record")
+                        
                         ForEach(viewModel.drinks) { drink in
                             Button {
                                 drinkFlow.selectedDrink = drink

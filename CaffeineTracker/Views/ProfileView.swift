@@ -45,12 +45,6 @@ struct ProfileView: View {
                 .font(Font.custom("Montserrat-SemiBold", size: 36))
                 .foregroundColor(.black)
         }
-//        .onAppear{
-//            print("User")
-//            print(user.firstName)
-//            print(user.profileURL)
-//        }
-        
         
         VStack{
             

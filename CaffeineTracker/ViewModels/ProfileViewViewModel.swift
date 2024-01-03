@@ -19,6 +19,7 @@ class ProfileViewViewModel: ObservableObject {
     @Published var profilepic: UIImage? = nil
     @Published var profileURL: URL?
     @Published var newProfilePic: UIImage? = nil
+    var ref: StorageReference?
     
     func fetchUser() {
         
@@ -65,6 +66,12 @@ class ProfileViewViewModel: ObservableObject {
             return
         }
         
+        if user.profileURL.isEmpty {
+            print("No profile url")
+            completion(nil)
+            return
+        }
+        
         let profileRef = Storage.storage().reference(forURL: user.profileURL)
         
         profileRef.getData(maxSize: 3 * 1024 * 1024) {data, error in
@@ -91,6 +98,7 @@ class ProfileViewViewModel: ObservableObject {
     }
     
     func updateProfilePic() {
+        print("uploading new profile pic")
         
         guard let user = user else {
             print("no user")
@@ -104,24 +112,37 @@ class ProfileViewViewModel: ObservableObject {
         guard let imageData = newProfilePic?.jpegData(compressionQuality: 0.5) else {
             print("Can't load profile")
             return}
+        print("Can load profile")
         
-        let ref = Storage.storage().reference(forURL: user.profileURL)
+        if user.profileURL.isEmpty {
+            ref = Storage.storage().reference(withPath: user.id)
+        } else {
+            ref = Storage.storage().reference(forURL: user.profileURL)
+        }
         
-        ref.putData(imageData, metadata: nil) {metadata, err in
+        ref?.putData(imageData, metadata: nil) {metadata, err in
             if let err = err {
                 print("Failed to push image to storage: \(err)")
                 return
             }
             
-            ref.downloadURL { url, err in
+            self.ref?.downloadURL { url, err in
                 if let err = err {
                     print("Failed to retrieve image url: \(err)")
                     return
                 }
                 
                 print("Successfully stored image with url: \(url?.absoluteString ?? "")")
+                
+                if let url = url {
+                    let db = Firestore.firestore()
+                    let userRecord = db.collection("users").document(user.id)
+                    userRecord.setData(["profileURL": url.absoluteString], merge: true)
+                }
             }
         }
+        
+        
     }
     
     
