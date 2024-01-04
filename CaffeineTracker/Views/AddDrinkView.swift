@@ -9,21 +9,25 @@ import SwiftUI
 
 struct AddDrinkView: View {
     
-    @EnvironmentObject var drinkFlow: DrinkFlow
+    @State var selectedDrink: DefaultDrink
     
     var body: some View {
-        Text(drinkFlow.selectedDrink.drinkImage)
+        
+        Text(selectedDrink.drinkImage)
             .font(.largeTitle)
         
-        Text(drinkFlow.selectedDrink.drinkName)
+        Text(selectedDrink.drinkName)
         HStack {
-            Text("\(drinkFlow.selectedDrink.quantity) ml")
-            Text("\(drinkFlow.selectedDrink.caffeineAmt) mg")
+            Text("\(selectedDrink.quantity) ml")
+            Text("\(selectedDrink.caffeineAmt) mg")
         }
         
     }
 }
 
-#Preview {
-    AddDrinkView()
-}
+//#Preview {
+//    AddDrinkView(selectedDrink: DefaultDrink(drinkName: "Customize",
+//                              drinkImage: "Default",
+//                              quantity: 300,
+//                              caffeineAmt: 0))
+//}

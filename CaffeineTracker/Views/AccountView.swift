@@ -41,7 +41,7 @@ struct AccountView: View {
             }
             .edgesIgnoringSafeArea(.bottom)
             .sheet(isPresented: $viewModel.showNewItemView, content : {
-                NewDrinkItemView(newItemPresented: $viewModel.showNewItemView)
+                NewDrinkListView(newItemPresented: $viewModel.showNewItemView)
             })
         }
         
