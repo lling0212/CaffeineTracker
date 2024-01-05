@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct RegisterView: View {
-    @State var viewModel = RegisterViewViewModel()
+    @StateObject var viewModel = RegisterViewViewModel()
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
     @State var showingAlert : Bool = false
@@ -76,6 +76,10 @@ struct RegisterView: View {
                     viewModField: $viewModel.firstName,
                     isSecure: false)
                 
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 5)
                 
                 TextFieldView(
                     label: "LAST NAME",
@@ -83,11 +87,21 @@ struct RegisterView: View {
                     viewModField: $viewModel.lastName,
                     isSecure: false)
                 
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 5)
+                
                 TextFieldView(
                     label: "EMAIL",
                     sublabel: "Enter your email address",
                     viewModField: $viewModel.email,
                     isSecure: false)
+                
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 5)
                 
                 TextFieldView(
                     label: "CREATE PASSWORD",
@@ -95,16 +109,43 @@ struct RegisterView: View {
                     viewModField: $viewModel.password,
                     isSecure: true)
                 
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 5)
+                
                 TextFieldView(
                     label: "CONFIRM PASSWORD",
                     sublabel: "Re-enter your password",
                     viewModField: $viewModel.confirmPassword,
                     isSecure: true)
                 
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 15)
+                
                 StyledButton(title: "Register", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     viewModel.register()
                 }
-                .offset(x: 39)
+                .offset(x:53)
+                .frame(width: 300, height: 40)
+                
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height: 15)
+                
+                HStack(){
+                    Spacer()
+                    Text(viewModel.userMsg)
+                        .foregroundColor(.red)
+                        .padding()
+                        .frame(height: 20)
+                        .font(Font.custom("Montserrat-Regular", size: 12))
+                    Spacer()
+                }
+                
             }
             
             .scrollContentBackground(.hidden)
@@ -118,18 +159,6 @@ struct RegisterView: View {
                     showingAlert = false
                 }
             }
-            
-            HStack(spacing: 0.0){
-                Spacer()
-                Text(viewModel.userMsg)
-                    .foregroundColor(.red)
-                    .padding()
-                    .offset(y: -25)
-                    .frame(height: 20)
-                    .font(Font.custom("Montserrat-Regular", size: 12))
-                Spacer()
-            }
-            
         }
     }
 }

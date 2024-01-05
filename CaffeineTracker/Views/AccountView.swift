@@ -11,6 +11,7 @@ struct AccountView: View {
     
     @State var selectedTab: String = "heart"
     @StateObject var viewModel: AccountViewViewModel
+    @State private var navigationPath: NavigationPath = NavigationPath()
     
     init() {
         UITabBar.appearance().isHidden = true

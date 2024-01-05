@@ -24,17 +24,15 @@ class RegisterViewViewModel: ObservableObject {
     @Published var profilepic: UIImage?
     @Published var profileURL = ""
     
-    init() {
-        userMsg = ""
-    }
+    init() {}
     
-    // func: register
     func register() {
         guard validate() else {
             return
         }
+        userMsg = ""
         
-        Auth.auth().createUser(withEmail: email, password: password) 
+        Auth.auth().createUser(withEmail: email, password: password)
             { [weak self] result, error in
             guard let userId = result?.user.uid else {
 //                self?.userMsg = "Register failed :( Please try again."
@@ -110,22 +108,6 @@ class RegisterViewViewModel: ObservableObject {
             .setData(newUser.asDictionary())
     }
     
-//    private func storeImageURL(imageProfileURL: URL) {
-//        let newUser = User(id: id,
-//                           firstName: firstName,
-//                           lastName: lastName,
-//                           email: email,
-//                           joined: Date().timeIntervalSince1970)
-////                           profileURL: profilepicURL)
-//        
-//        let db = Firestore.firestore()
-//        
-//        db.collection("users")
-//            .document(id)
-//            .setData(newUser.asDictionary())
-//    }
-    
-    // func: validate
     private func validate() -> Bool {
         guard !firstName.trimmingCharacters(in: .whitespaces).isEmpty,
               !lastName.trimmingCharacters(in: .whitespaces).isEmpty,
@@ -134,6 +116,7 @@ class RegisterViewViewModel: ObservableObject {
               !confirmPassword.trimmingCharacters(in: .whitespaces).isEmpty
         else {
             userMsg = "Make sure all fields are filled"
+            print(userMsg)
             return false
         }
         

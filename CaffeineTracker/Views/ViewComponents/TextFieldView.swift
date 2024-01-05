@@ -28,7 +28,7 @@ struct TextFieldView: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .frame(width: 300, height: 40)
                         .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
+                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.018, brightness: 0.916)).frame(height: 35))
                         .autocorrectionDisabled()
                         .font(Font.custom("Montserrat-SemiBold", size: 12))
                 } else {
@@ -36,7 +36,7 @@ struct TextFieldView: View {
                         .textFieldStyle(PlainTextFieldStyle())
                         .frame(width: 300, height: 30)
                         .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.003, brightness: 0.968)).frame(height: 35))
+                        .background(RoundedRectangle(cornerRadius: 30).fill(Color(hue: 1.0, saturation: 0.018, brightness: 0.916)).frame(height: 35))
                         .autocorrectionDisabled()
                         .font(Font.custom("Montserrat-SemiBold", size: 12))
                 }

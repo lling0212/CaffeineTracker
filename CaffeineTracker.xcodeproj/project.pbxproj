@@ -34,6 +34,7 @@
 		911DBEF82AEF538900632D00 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE62AEF538900632D00 /* Montserrat-Medium.ttf */; };
 		911DBEF92AEF538900632D00 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE72AEF538900632D00 /* Montserrat-Black.ttf */; };
 		911DBEFA2AEF538900632D00 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911DBEE82AEF538900632D00 /* Montserrat-LightItalic.ttf */; };
+		914E109B2B48A55B00A61137 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E109A2B48A55A00A61137 /* CustomAlert.swift */; };
 		915081AC2AFA1075004E79A8 /* CustomtabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915081AB2AFA1075004E79A8 /* CustomtabBar.swift */; };
 		9171F6942AF0C1130072EA67 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171F6932AF0C1130072EA67 /* Extensions.swift */; };
 		91774C932AE189270078818A /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C922AE189270078818A /* FontBlaster.swift */; };
@@ -91,7 +92,7 @@
 		91D3CE8B2AE0A830007A1EB9 /* SummaryViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE8A2AE0A830007A1EB9 /* SummaryViewViewModel.swift */; };
 		91D3CE8D2AE0A847007A1EB9 /* DrinkListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE8C2AE0A847007A1EB9 /* DrinkListViewViewModel.swift */; };
 		91D3CE8F2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE8E2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift */; };
-		91D3CE912AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */; };
+		91D3CE912AE0A870007A1EB9 /* AddDrinkViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE902AE0A870007A1EB9 /* AddDrinkViewViewModel.swift */; };
 		91D3CE932AE0A87F007A1EB9 /* CalendarViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		911DBEE62AEF538900632D00 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		911DBEE72AEF538900632D00 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
 		911DBEE82AEF538900632D00 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		914E109A2B48A55A00A61137 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		915081AB2AFA1075004E79A8 /* CustomtabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomtabBar.swift; sourceTree = "<group>"; };
 		9171F6932AF0C1130072EA67 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91774C912AE1826D0078818A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 		91D3CE8A2AE0A830007A1EB9 /* SummaryViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewViewModel.swift; sourceTree = "<group>"; };
 		91D3CE8C2AE0A847007A1EB9 /* DrinkListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListViewViewModel.swift; sourceTree = "<group>"; };
 		91D3CE8E2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListItemViewViewModel.swift; sourceTree = "<group>"; };
-		91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDrinkItemViewViewModel.swift; sourceTree = "<group>"; };
+		91D3CE902AE0A870007A1EB9 /* AddDrinkViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDrinkViewViewModel.swift; sourceTree = "<group>"; };
 		91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 				91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */,
 				915081AB2AFA1075004E79A8 /* CustomtabBar.swift */,
 				911DBED32AEF35A700632D00 /* ProfilePicView.swift */,
+				914E109A2B48A55A00A61137 /* CustomAlert.swift */,
 				9103CAE62AE9740B00C0057D /* TextFieldView.swift */,
 			);
 			path = ViewComponents;
@@ -304,7 +307,7 @@
 				91D3CE8A2AE0A830007A1EB9 /* SummaryViewViewModel.swift */,
 				91D3CE8C2AE0A847007A1EB9 /* DrinkListViewViewModel.swift */,
 				91D3CE8E2AE0A85D007A1EB9 /* DrinkListItemViewViewModel.swift */,
-				91D3CE902AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift */,
+				91D3CE902AE0A870007A1EB9 /* AddDrinkViewViewModel.swift */,
 				9111D9A52B1D424D00969C1A /* NewDrinkListViewViewModel.swift */,
 				91D3CE922AE0A87F007A1EB9 /* CalendarViewViewModel.swift */,
 				91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */,
@@ -519,7 +522,8 @@
 				91D3CE8B2AE0A830007A1EB9 /* SummaryViewViewModel.swift in Sources */,
 				9104EEDF2B0967A0000627E4 /* AccountViewViewModel.swift in Sources */,
 				9171F6942AF0C1130072EA67 /* Extensions.swift in Sources */,
-				91D3CE912AE0A870007A1EB9 /* NewDrinkItemViewViewModel.swift in Sources */,
+				914E109B2B48A55B00A61137 /* CustomAlert.swift in Sources */,
+				91D3CE912AE0A870007A1EB9 /* AddDrinkViewViewModel.swift in Sources */,
 				91D3CE7F2AE0A73D007A1EB9 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
