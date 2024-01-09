@@ -9,10 +9,9 @@ import SwiftUI
 
 struct NewDrinkListView: View {
     @StateObject private var viewModel = NewDrinkListViewViewModel()
-    @Binding var newItemPresented: Bool
+    @EnvironmentObject var drinkFlow: DrinkFlow
     
     var body: some View {
-        NavigationView{
             ZStack {
                     Rectangle()
                         .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
@@ -31,41 +30,43 @@ struct NewDrinkListView: View {
                         LazyVStack {
                             
                             ForEach(viewModel.drinks) { drink in
-                                NavigationLink(destination: AddDrinkView(selectedDrink: drink)) {
+                                Button{
+                                    drinkFlow.selectedDrink = drink
+                                    drinkFlow.navigateToDrinkView()
+                                } label: {
                                     
-                                        HStack {
-                                            
-                                            Image(drink.drinkImage)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .clipShape(Circle())
-                                                .overlay{
-                                                    Circle().stroke(.white, lineWidth: 4)
-                                                }
-                                                .frame(width: 100, height: 100)
-                                            
-                                            Rectangle()
-                                                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
-                                                .frame(width: 10, height: 100)
-                                            
-                                            VStack(alignment: .leading, spacing: 8) {
-                                                Text(drink.drinkName)
-                                                    .font(Font.custom("Montserrat-SemiBold", size: 16))
-                                                    .foregroundColor(.black)
-                                                HStack {
-                                                    Text("\(drink.quantity) ml")
-                                                        .font(Font.custom("Montserrat-Regular", size: 12))
-                                                        .foregroundColor(.gray)
-                                                    Text("\(drink.caffeineAmt) mg")
-                                                        .font(Font.custom("Montserrat-Regular", size: 12))
-                                                        .foregroundColor(.gray)
-                                                }
+                                    HStack {
+                                        
+                                        Image(drink.drinkImage)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .clipShape(Circle())
+                                            .overlay{
+                                                Circle().stroke(.white, lineWidth: 4)
                                             }
-                                            .frame(width: 200, height: 120, alignment: .leading)
+                                            .frame(width: 100, height: 100)
+                                        
+                                        Rectangle()
+                                            .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                                            .frame(width: 10, height: 100)
+                                        
+                                        VStack(alignment: .leading, spacing: 8) {
+                                            Text(drink.drinkName)
+                                                .font(Font.custom("Montserrat-SemiBold", size: 16))
+                                                .foregroundColor(.black)
+                                            HStack {
+                                                Text("\(drink.quantity) ml")
+                                                    .font(Font.custom("Montserrat-Regular", size: 12))
+                                                    .foregroundColor(.gray)
+                                                Text("\(drink.caffeineAmt) mg")
+                                                    .font(Font.custom("Montserrat-Regular", size: 12))
+                                                    .foregroundColor(.gray)
+                                            }
                                         }
-                                        .padding(.horizontal)
-                                        .id(drink.id)
-                                }
+                                        .frame(width: 200, height: 120, alignment: .leading)
+                                    }
+                                    .padding(.horizontal)
+                                }.buttonStyle(.plain)
                             }
                         }
                     }
@@ -73,9 +74,9 @@ struct NewDrinkListView: View {
             }
         }
     }
-}
 
 
 #Preview {
-    NewDrinkListView(newItemPresented: .constant(true))
+    NewDrinkListView()
+        .environmentObject(DrinkFlow.shared)
 }

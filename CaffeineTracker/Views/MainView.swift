@@ -12,7 +12,7 @@ struct MainView: View {
     
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            AccountView()
+            AccountView(userid: viewModel.currentUserId)
         } else {
             NavigationView {
                 WelcomeView()
@@ -25,6 +25,7 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(DrinkFlow.shared)
 }
 
 // FOR LOOKING UP FONTS

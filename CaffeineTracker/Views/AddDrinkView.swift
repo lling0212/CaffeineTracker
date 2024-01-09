@@ -9,22 +9,11 @@ import SwiftUI
 
 struct AddDrinkView: View {
     
-    @State var selectedDrink: DefaultDrink
-    @StateObject var viewModel: AddDrinkViewViewModel
-    @Environment(\.presentationMode) var presentationMode
+    @StateObject var viewModel = AddDrinkViewViewModel()
+    @EnvironmentObject var drinkFlow: DrinkFlow
     @State var navigateBack = false
     
-    init(selectedDrink: DefaultDrink) {
-            self._selectedDrink = State(initialValue: selectedDrink)
-            self._viewModel = StateObject(wrappedValue: AddDrinkViewViewModel(selectedDrink: selectedDrink))
-    }
-
-    // add save confirmation pop up
-    // add redirection to main view
-    
-    
     var body: some View {
-        NavigationStack{
             ZStack {
                 Rectangle()
                     .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
@@ -32,7 +21,7 @@ struct AddDrinkView: View {
                 
                 VStack{
                     
-                    Image(selectedDrink.drinkImage)
+                    Image(drinkFlow.selectedDrink.drinkImage)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .clipShape(Circle())
@@ -171,14 +160,22 @@ struct AddDrinkView: View {
                 CustomAlert(show: $viewModel.showSavedAlert, navigate: $navigateBack)
                     .onChange(of: navigateBack) {
                         if navigateBack {
-                            presentationMode.wrappedValue.dismiss()
+                            print("navigate to root")
+                            drinkFlow.navigateBackToRoot()
                         }
                     }
             }
+            .onAppear{
+                viewModel.drinkName = drinkFlow.selectedDrink.drinkName
+                viewModel.drinkImage = drinkFlow.selectedDrink.drinkImage
+                viewModel.drinkAmount = drinkFlow.selectedDrink.quantity
+                viewModel.caffeineAmt = drinkFlow.selectedDrink.caffeineAmt
+            }
         }
     }
-}
+
 
 #Preview {
-    AddDrinkView(selectedDrink: DefaultDrink(drinkName: "Customize", drinkImage: "Default", quantity: 300, caffeineAmt: 0))
+    AddDrinkView()
+        .environmentObject(DrinkFlow.shared)
 }

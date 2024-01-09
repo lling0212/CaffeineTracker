@@ -10,6 +10,7 @@ import Foundation
 struct DrinkItem: Codable, Identifiable {
     var id: String
     var drinkName: String
+    let drinkImage: String
     var drinkAmt: Int
     var caffeineAmt: Int
     var time: TimeInterval

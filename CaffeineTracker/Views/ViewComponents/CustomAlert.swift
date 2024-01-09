@@ -54,13 +54,12 @@ struct CustomAlert: View {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 30)
                                         .foregroundColor(Color(hue: 1.0, saturation: 0.018, brightness: 0.916))
-                                    Text("See list")
+                                    Text("Back to home")
                                         .foregroundStyle(.gray)
                                         .font(Font.custom("Montserrat-SemiBold", size: 16))
                                 }
                             }
-                            .frame(width: 120, height: 25)
-                            .navigationDestination(isPresented: $navigate){AccountView()}
+                            .frame(width: 140, height: 25)
                         }
                     }
                     .frame(width: 170, height: 180)

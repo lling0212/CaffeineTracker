@@ -21,6 +21,7 @@ struct CaffeineTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(DrinkFlow.shared)
         }
     }
 }

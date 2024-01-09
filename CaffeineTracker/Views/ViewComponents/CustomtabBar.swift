@@ -14,6 +14,7 @@ struct CustomtabBar: View {
     @Binding var selectedTab: String
     @Namespace var animation
     @StateObject var viewModel: AccountViewViewModel
+    @EnvironmentObject var drinkFlow: DrinkFlow
     
     var body: some View {
         
@@ -23,7 +24,7 @@ struct CustomtabBar: View {
                 TabbarButton(animation: animation, image: "calendar", selectedTab: $selectedTab)
                 
                 Button(action: {
-                    viewModel.showNewItemView = true
+                    drinkFlow.navigateToDrinkList()
                 }, label: {
                     Image(systemName: "plus")
                         .resizable()
@@ -89,5 +90,6 @@ struct TabbarButton: View {
 }
 
 #Preview {
-    AccountView()
+    AccountView(userid: "2IKkxUBSsONdTFsu7EWW25Vbkhc2")
+        .environmentObject(DrinkFlow.shared)
 }

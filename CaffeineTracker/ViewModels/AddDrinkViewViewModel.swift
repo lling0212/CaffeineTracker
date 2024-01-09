@@ -12,22 +12,22 @@ import FirebaseFirestore
 class AddDrinkViewViewModel: ObservableObject {
     
     @Published var drinkName = ""
+    @Published var drinkImage = ""
     @Published var date = Date()
     @Published var drinkAmount = 0
     @Published var caffeineAmt = 0
     @Published var showSavedAlert = false
     @Published var errormsg = ""
     
-    init(selectedDrink: DefaultDrink) {
-//        showSavedAlert = false
-        updateFields(with: selectedDrink)
-    }
-
-    func updateFields(with drink: DefaultDrink) {
-        drinkName = drink.drinkName
-        drinkAmount = drink.quantity
-        caffeineAmt = drink.caffeineAmt
-    }
+//    init(selectedDrink: DefaultDrink) {
+//        updateFields(with: selectedDrink)
+//    }
+//
+//    func updateFields(with drink: DefaultDrink) {
+//        drinkName = drink.drinkName
+//        drinkAmount = drink.quantity
+//        caffeineAmt = drink.caffeineAmt
+//    }
     
     func save() {
         guard let uId = Auth.auth().currentUser?.uid else {
@@ -38,6 +38,7 @@ class AddDrinkViewViewModel: ObservableObject {
         let newId = UUID().uuidString
         let newItem = DrinkItem(id: newId,
                                 drinkName: drinkName,
+                                drinkImage: drinkImage,
                                 drinkAmt: drinkAmount,
                                 caffeineAmt: caffeineAmt,
                                 time: date.timeIntervalSince1970)
