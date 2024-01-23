@@ -10,5 +10,4 @@ import Foundation
 enum DrinkNavigation {
     case drinkList
     case drinkDetails
-//    case drinkIngredients
 }

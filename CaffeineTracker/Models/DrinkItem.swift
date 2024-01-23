@@ -14,6 +14,7 @@ struct DrinkItem: Codable, Identifiable {
     var drinkAmt: Int
     var caffeineAmt: Int
     var time: TimeInterval
+    var date: String
     
     // need to add mutating functions to be able edit each item
     

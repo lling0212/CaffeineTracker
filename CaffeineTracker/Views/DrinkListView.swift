@@ -10,47 +10,59 @@ import FirebaseFirestoreSwift
 
 struct DrinkListView: View {
     @StateObject var viewModel: DrinkListViewViewModel
-    @FirestoreQuery var drinks: [DrinkItem]
+    private var userid: String
+    
     
     init(userid: String) {
+        self.userid = userid
         self._viewModel = StateObject (wrappedValue:
             DrinkListViewViewModel(userid: userid)
         )
-        self._drinks = FirestoreQuery(collectionPath: "users/\(userid)/drinks")
+
     }
     
+    
     var body: some View {
-        
-            VStack {
-                if viewModel.drinks.isEmpty {
-                    Text("Loading...")
-                } else {
-                    List {
-                        ForEach(viewModel.groupedDrinks.keys.sorted(), id: \.self){ date in
-                            Section(header: Text(date)) {
-                                ForEach(viewModel.groupedDrinks[date] ?? []) {drink in DrinkListItemView(drink: drink)}
-                            }
+        ZStack {
+            Rectangle()
+                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                .ignoresSafeArea(.all)
+            
+            VStack(alignment: .leading) {
+                Rectangle()
+                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    .ignoresSafeArea(.all)
+                    .frame(height:10)
+                
+                Text("Drink Record")
+                    .font(Font.custom("Montserrat-SemiBold", size: 18))
+                    .foregroundColor(.black)
+                    .frame(height:10)
+                    .offset(x: 30)
+                                
+                List {
+                    ForEach(viewModel.sectionHeaders, id: \.self) { key in
+                        VStack(alignment: .leading) {
+                            Text(key)
+                                .font(Font.custom("Montserrat-SemiBold", size: 12))
+                                .foregroundColor(.black)
+                                .offset(x: 15)
                             
-                        }
-                    }
-                }
-                List(viewModel.drinks) { item in
-                    DrinkListItemView(drink: item)
-                        .swipeActions {
-                            Button("Delete") {
-                                viewModel.delete(drinkid:item.id)
+                            ForEach(viewModel.groupedDrinks[key]!) { item in
+                                
+                                DrinkListItemView(userid: userid, drink: item)
+                                    .listRowSeparator(.hidden)
+                                    .listRowBackground(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                                
                             }
-                            .tint(Color.red)
                         }
-                }
-                .listStyle(PlainListStyle())
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+                    }
+                }.listStyle(PlainListStyle())
             }
-            //                viewModel.drinks = drinks
-            //                print(drinks)
-            //                print(viewModel.drinks)
-            //                viewModel.updateGrouping()
-            //                print(viewModel.groupedDrinks)
-            //            }
+            
+        }.onAppear{viewModel.fetchData()}
     }
 }
 

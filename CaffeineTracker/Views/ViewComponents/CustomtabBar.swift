@@ -17,7 +17,8 @@ struct CustomtabBar: View {
     @EnvironmentObject var drinkFlow: DrinkFlow
     
     var body: some View {
-        
+        VStack {
+            Spacer()
             HStack(spacing: 0) {
                 TabbarButton(animation: animation, image: "heart", selectedTab: $selectedTab)
                 
@@ -30,7 +31,7 @@ struct CustomtabBar: View {
                         .resizable()
                         .renderingMode(.template)
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 24, height: 24)
+                        .frame(width: 20, height: 20)
                         .foregroundColor(.white)
                         .padding(20)
                         .background(Color(hue: 1.0, saturation: 0.61, brightness: 0.856))
@@ -39,18 +40,17 @@ struct CustomtabBar: View {
                         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
                     
                 })
-                .offset(y: -35)
+                .offset(y: -30)
                 
-                TabbarButton(animation: animation, image: "photo.on.rectangle", selectedTab: $selectedTab)
+                TabbarButton(animation: animation, image: "list.bullet.circle", selectedTab: $selectedTab)
                 
                 TabbarButton(animation: animation, image: "person.crop.square", selectedTab: $selectedTab)
             }
-            
-//            .padding(.top)
-            .padding(.vertical, 10)
-//            .offset(y:15)
+            //            .padding(.top)
+            .padding(.vertical, 5)
             .background(Color.white)
-            
+            .frame(height:95)
+        }
         
     }
 }
@@ -72,12 +72,12 @@ struct TabbarButton: View {
                 Image(systemName: image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 28, height: 28)
+                    .frame(width: 25, height: 25)
                     .foregroundColor(selectedTab == image ? Color(Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) : Color.gray.opacity(0.6))
                 
                 if selectedTab == image{
                     Circle()
-                        .fill(.pink)
+                        .fill(Color(hue: 1.0, saturation: 0.61, brightness: 0.856))
                         .matchedGeometryEffect(id: "TAB", in: animation)
                         .frame(width: 8, height: 8)
                 }

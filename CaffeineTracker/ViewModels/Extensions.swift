@@ -10,8 +10,6 @@ import SwiftUI
 import Firebase
 import Combine
 
-// understand details of Encodable
-
 extension Encodable {
     func asDictionary() -> [String: Any] {
         
@@ -27,6 +25,28 @@ extension Encodable {
             return [:]
         }
         
+    }
+}
+
+extension Double {
+    func toRadians() -> Double {
+        return self * Double.pi / 180
+    }
+    func toCGFloat() -> CGFloat {
+        return CGFloat(self)
+    }
+}
+
+
+
+extension Date {
+    func getAllDates() -> [Date] {
+        let calendar = Calendar.current
+        let startDate = calendar.date(from: Calendar.current.dateComponents([.year, .month], from: self))!
+        let range = calendar.range(of: .day, in: .month, for: startDate)!
+        return range.compactMap { day -> Date in
+            return calendar.date(byAdding: .day, value: day - 1, to: startDate)!
+        }
     }
 }
 

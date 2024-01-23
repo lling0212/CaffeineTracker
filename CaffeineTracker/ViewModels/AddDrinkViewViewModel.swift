@@ -35,13 +35,17 @@ class AddDrinkViewViewModel: ObservableObject {
             return
         }
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yy"
+        
         let newId = UUID().uuidString
         let newItem = DrinkItem(id: newId,
                                 drinkName: drinkName,
                                 drinkImage: drinkImage,
                                 drinkAmt: drinkAmount,
                                 caffeineAmt: caffeineAmt,
-                                time: date.timeIntervalSince1970)
+                                time: date.timeIntervalSince1970,
+                                date: dateFormatter.string(from: date))
         
         let db = Firestore.firestore()
         db.collection("users")

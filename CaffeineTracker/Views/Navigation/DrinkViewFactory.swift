@@ -17,8 +17,6 @@ class DrinkViewFactory {
                 return AnyView(NewDrinkListView())
             case .drinkDetails:
                 return AnyView(AddDrinkView())
-    //        case .drinkIngredients:
-    //            return AnyView(DrinkyIngedientsView())
         }
     }
 }

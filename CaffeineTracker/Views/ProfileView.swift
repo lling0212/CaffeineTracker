@@ -35,9 +35,8 @@ struct ProfileView: View {
         .onAppear{
             viewModel.fetchUser()
         }
-        .onChange(of: viewModel.user) { newUser in
-                user = newUser
-                
+        .onChange(of: viewModel.user) {
+            user = viewModel.user
             }
     }
     
@@ -103,7 +102,7 @@ struct ProfileView: View {
                 StyledButton(title: "Log Out", bg: Color(hue: 1.0, saturation: 0.61, brightness: 0.856)) {
                     viewModel.logout()
                 }
-                .frame(width: 100)
+                
             }
             .alert("Do you want to use selected image as your profile?", isPresented: ($showingAlert)) {
                 Button("Yes") {

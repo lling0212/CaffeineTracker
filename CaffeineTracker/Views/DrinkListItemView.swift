@@ -8,54 +8,79 @@
 import SwiftUI
 
 struct DrinkListItemView: View {
-    let drink : DrinkItem
+    
+    @State var drink : DrinkItem
+    @StateObject var viewModel: DrinkListItemViewViewModel
+    
+    init(userid: String, drink: DrinkItem) {
+        self.drink = drink
+        self._viewModel = StateObject (wrappedValue:
+            DrinkListItemViewViewModel(userid: userid)
+        )
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yy"
+        return dateFormatter.string(from: date)
+    }
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
+           
+            RoundedRectangle(cornerRadius: 15)
+                .fill(Color(hue: 1.0, saturation: 0.018, brightness: 0.916))
                 .ignoresSafeArea(.all)
+                .frame(width: 350, height: 80)
             
-            HStack {
+            VStack(alignment:.leading) {
                 
-                Image(drink.drinkImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .clipShape(Circle())
-                    .overlay{
-                        Circle().stroke(.white, lineWidth: 4)
+                HStack {
+                    
+                    Image(drink.drinkImage)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(Circle())
+                        .overlay{
+                            Circle().stroke(.white, lineWidth: 4)
+                        }
+                        .frame(width: 50, height: 50)
+                    
+                    Rectangle()
+                        .fill(Color(hue: 1.0, saturation: 0.018, brightness: 0.916))
+                        .frame(width: 10, height: 25)
+                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(drink.drinkName)
+                            .font(Font.custom("Montserrat-SemiBold", size: 12))
+                            .foregroundColor(.black)
+                        HStack {
+                            Text("\(drink.drinkAmt) ml")
+                                .font(Font.custom("Montserrat-Regular", size: 10))
+                                .foregroundColor(.gray)
+                            Text("\(drink.caffeineAmt) mg")
+                                .font(Font.custom("Montserrat-Regular", size: 10))
+                                .foregroundColor(.gray)
+                        }
                     }
-                    .frame(width: 60, height: 60)
-                
-                Rectangle()
-                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
-                    .frame(width: 10, height: 100)
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(drink.drinkName)
-                        .font(Font.custom("Montserrat-SemiBold", size: 14))
-                        .foregroundColor(.black)
-                    HStack {
-                        Text("\(drink.drinkAmt) ml")
-                            .font(Font.custom("Montserrat-Regular", size: 10))
-                            .foregroundColor(.gray)
-                        Text("\(drink.caffeineAmt) mg")
-                            .font(Font.custom("Montserrat-Regular", size: 10))
-                            .foregroundColor(.gray)
-                    }
+                    .frame(width: 200, height: 60, alignment: .leading)
+                    .offset(x:20)
+                    
+                    Image(systemName: "trash.circle.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25, height: 25)
+                        .foregroundStyle(Color(hue: 1.0, saturation: 0.412, brightness: 0.72))
+                        .onTapGesture {
+                            viewModel.delete(drinkid:drink.id)
+                        }
                 }
-                .frame(width: 200, height: 80, alignment: .leading)
+                
             }
         }
     }
 }
 
 #Preview {
-    DrinkListItemView(drink : DrinkItem(
-        id: "123",
-        drinkName: "Customize",
-        drinkImage: "Default",
-        drinkAmt: 300,
-        caffeineAmt: 0, 
-        time: Date().timeIntervalSince1970))
+    DrinkListView(userid: "2IKkxUBSsONdTFsu7EWW25Vbkhc2")
 }
