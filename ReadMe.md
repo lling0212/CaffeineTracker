@@ -112,7 +112,7 @@ This app is a personal project built for learning purposes (and for fun!). It is
 
 I built this app from scratch with no prior experience with iOS development. Thankfully I was able to rely on some amazing resources to build out both the front end UI and backend functionalities I envisioned. Here is a list of resources that helped tremendously on my development journey: 
 
-* To learn about Firebase and how to set up the basic structure of my app, I took inspiration from <a href=[iOSAcademy-url]>this tutorial</a>
+* To learn about Firebase and how to set up the basic structure of my app, I took inspiration from [this tutorial](iOSAcademy-url)
 * To build the progress ring on the summary dashboard, I referenced <a href=[Progress-bar-url]>this Medium article</a>
 * To create many of the visual elements (e.g., menu bar), I learned from videos on <a href=[Kavsoft-url]>this Youtube channel</a>
 * To build the customized calendar, I referenced <a href=[Calendar-url]>this video</a>
