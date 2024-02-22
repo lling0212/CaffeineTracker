@@ -62,6 +62,8 @@ Entry form
 
 summary dashboard
 
+<img src="CaffeineTracker/Others/Dashboard.gif" alt="Dashboard" width="200">
+
 calendar view
 
 drink history
