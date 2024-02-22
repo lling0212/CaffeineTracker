@@ -82,7 +82,7 @@ class CalendarViewViewModel: ObservableObject {
     
     func yearMonth(currentMonth: Int)->String {
         let calendar = Calendar.current
-        let adjusted = calendar.date(byAdding: .month, value: currentMonth, to: currentDate)
+        let adjusted = calendar.date(byAdding: .month, value: currentMonth, to: Date())
         
         if let adjusted = adjusted {
             let month = calendar.component(.month, from: adjusted) - 1
@@ -112,10 +112,10 @@ class CalendarViewViewModel: ObservableObject {
             if let endOfMonth = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: startOfMonth) {
                 let startTimeInterval = startOfMonth.timeIntervalSince1970
                 let endTimeInterval = endOfMonth.timeIntervalSince1970 + 86399 // Adjust for the end of the day
-                print("startOfMonth", startOfMonth)
-                print(startTimeInterval)
-                print("EndOfMonth", endOfMonth)
-                print(endTimeInterval)
+//                print("startOfMonth", startOfMonth)
+//                print(startTimeInterval)
+//                print("EndOfMonth", endOfMonth)
+//                print(endTimeInterval)
                 return (startTimeInterval, endTimeInterval)
             }
         }
@@ -124,6 +124,7 @@ class CalendarViewViewModel: ObservableObject {
 
     
     func extractDate(currentMonth: Int)->[DateValue] {
+//        print("current month", currentMonth)
         let calendar = Calendar.current
         let currentMonth = getCurrentMonth(currentMonth: currentMonth)
         var days = currentMonth.getAllDates().compactMap { date -> DateValue in

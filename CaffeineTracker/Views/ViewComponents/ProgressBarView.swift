@@ -3,7 +3,7 @@
 //  CaffeineTracker
 //
 //  Created by Lisa's Mac Pro on 2024/1/10.
-//  https://medium.com/@frankjia/creating-activity-rings-in-swiftui-11ef7d336676#:~:text=To%20support%20percentages%20over%20100,over%20the%20last%20360%20degrees.
+//  
 
 
 import SwiftUI

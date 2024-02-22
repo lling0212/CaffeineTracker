@@ -27,12 +27,3 @@ struct MainView: View {
     MainView()
         .environmentObject(DrinkFlow.shared)
 }
-
-// FOR LOOKING UP FONTS
-// in init
-//        for name in UIFont.familyNames {
-//            print(name)
-//            for fontName in UIFont.fontNames(forFamilyName: name) {
-//                print("-- \(fontName)")
-//            }
-//        }

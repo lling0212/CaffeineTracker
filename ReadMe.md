@@ -110,13 +110,13 @@ This app is a personal project built for learning purposes (and for fun!). It is
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-I built this app from scratch with no prior experience with iOS development. Thankfully I was able to rely on some amazing resources to build out both the front end UI and backend functionalities I envisioned. Here is a list of resources that helped tremendously on my development journey - 
+I built this app from scratch with no prior experience with iOS development. Thankfully I was able to rely on some amazing resources to build out both the front end UI and backend functionalities I envisioned. Here is a list of resources that helped tremendously on my development journey: 
 
-* Firebase to do list tutorial
-* Progress bar
-* Front-end UI elements
-* Customized calendar 
-* Navigation logic
+* To learn about Firebase and how to set up the basic structure of my app, I took inspiration from <a href=[iOSAcademy-url]>this tutorial</a>
+* To build the progress ring on the summary dashboard, I referenced <a href=[Progress-bar-url]>this Medium article</a>
+* To create many of the visual elements (e.g., menu bar), I learned from videos on <a href=[Kavsoft-url]>this Youtube channel</a>
+* To build the customized calendar, I referenced <a href=[Calendar-url]>this video</a>
+* To set up the correct navigation between views, I learned from <a href=[Navigation-url]>this Medium article</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -130,3 +130,8 @@ I built this app from scratch with no prior experience with iOS development. Tha
 [XCode-url]: https://developer.apple.com/xcode/
 [Firebase-url]: https://firebase.google.com/
 [Firebase]: https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black
+[Progress-bar-url]: https://medium.com/@frankjia/creating-activity-rings-in-swiftui-11ef7d336676#:~:text=To%20support%20percentages%20over%20100,over%20the%20last%20360%20degrees.
+[Kavsoft-url]: https://www.youtube.com/@Kavsoft
+[iOSAcademy-url]: https://youtu.be/t_mypMqSXNw?si=b7Y9zPLR9Mm91Sq1
+[Calendar-url]: https://youtu.be/pOSQr7DI310?si=DLFOEwOJdXCVhNGN
+[Navigation-url]: https://moussahellal.medium.com/navigation-in-swiftui-custom-and-complete-with-navigationstack-a12f8e8f8745
