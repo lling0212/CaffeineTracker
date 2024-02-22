@@ -112,11 +112,11 @@ This app is a personal project built for learning purposes (and for fun!). It is
 
 I built this app from scratch with no prior experience with iOS development. Thankfully I was able to rely on some amazing resources to build out both the front end UI and backend functionalities I envisioned. Here is a list of resources that helped tremendously on my development journey: 
 
-* To learn about Firebase and how to set up the basic structure of my app, I took inspiration from [this tutorial]("https://youtu.be/t_mypMqSXNw?si=b7Y9zPLR9Mm91Sq1")
-* To build the progress ring on the summary dashboard, I referenced [this Medium article]("https://medium.com/@frankjia/creating-activity-rings-in-swiftui-11ef7d336676#:~:text=To%20support%20percentages%20over%20100,over%20the%20last%20360%20degrees.")
+* To learn about Firebase and how to set up the basic structure of my app, I took inspiration from [this tutorial](https://youtu.be/t_mypMqSXNw?si=b7Y9zPLR9Mm91Sq1)
+* To build the progress ring on the summary dashboard, I referenced [this Medium article](https://medium.com/@frankjia/creating-activity-rings-in-swiftui-11ef7d336676#:~:text=To%20support%20percentages%20over%20100,over%20the%20last%20360%20degrees.)
 * To create many of the visual elements (e.g., menu bar), I learned from videos on [this Youtube channel]("https://www.youtube.com/@Kavsoft")
-* To build the customized calendar, I referenced [this video]()
-* To set up the correct navigation between views, I learned from [this Medium article]("https://moussahellal.medium.com/navigation-in-swiftui-custom-and-complete-with-navigationstack-a12f8e8f8745")
+* To build the customized calendar, I referenced [this video](https://youtu.be/pOSQr7DI310?si=DLFOEwOJdXCVhNGN)
+* To set up the correct navigation between views, I learned from [this Medium article](https://moussahellal.medium.com/navigation-in-swiftui-custom-and-complete-with-navigationstack-a12f8e8f8745)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
