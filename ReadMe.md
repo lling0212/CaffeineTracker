@@ -5,7 +5,7 @@
 <div align="center">
 
   <a>
-    <img src="CaffeineTracker/Others/icon.jpg" alt="Logo" width="200" height="200">
+    <img src="CaffeineTracker/Others/icon.jpg" alt="Logo" width="220" height="220">
   </a>
 
 <h1 align="center">Caffeine Tracker</h1>
