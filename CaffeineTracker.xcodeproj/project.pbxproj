@@ -45,6 +45,8 @@
 		917379DF2B4E8B19006B621A /* WeeklyBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917379DE2B4E8B19006B621A /* WeeklyBarView.swift */; };
 		91774C932AE189270078818A /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C922AE189270078818A /* FontBlaster.swift */; };
 		91774C952AE18A2C0078818A /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91774C942AE18A2C0078818A /* FontHelper.swift */; };
+		9186E8382B749BAE0073C223 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 9186E8372B749BAE0073C223 /* ReadMe.md */; };
+		9186E83A2B749CB00073C223 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9186E8392B749CB00073C223 /* icon.jpg */; };
 		91B2C1BA2AE7663300F4B222 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1B92AE7663300F4B222 /* HeaderView.swift */; };
 		91B2C1BC2AE76BC500F4B222 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */; };
 		91B2C1BE2AE76DD200F4B222 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */; };
@@ -143,6 +145,8 @@
 		91774C912AE1826D0078818A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		91774C922AE189270078818A /* FontBlaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontBlaster.swift; sourceTree = "<group>"; };
 		91774C942AE18A2C0078818A /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		9186E8372B749BAE0073C223 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		9186E8392B749CB00073C223 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		91B2C1B92AE7663300F4B222 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		91B2C1BB2AE76BC500F4B222 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		91B2C1BD2AE76DD200F4B222 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				91774C922AE189270078818A /* FontBlaster.swift */,
+				9186E8372B749BAE0073C223 /* ReadMe.md */,
+				9186E8392B749CB00073C223 /* icon.jpg */,
 				91D3CE202AE09A30007A1EB9 /* Assets.xcassets */,
 				91D3CE612AE09E5D007A1EB9 /* GoogleService-Info.plist */,
 				91D3CE1C2AE09A2F007A1EB9 /* CaffeineTrackerApp.swift */,
@@ -465,12 +471,14 @@
 				91D3CE242AE09A30007A1EB9 /* Preview Assets.xcassets in Resources */,
 				911DBEF62AEF538900632D00 /* Montserrat-BlackItalic.ttf in Resources */,
 				911DBEF12AEF538900632D00 /* Montserrat-ExtraLight.ttf in Resources */,
+				9186E83A2B749CB00073C223 /* icon.jpg in Resources */,
 				911DBEE92AEF538900632D00 /* Montserrat-ExtraBold.ttf in Resources */,
 				911DBEEC2AEF538900632D00 /* Montserrat-Regular.ttf in Resources */,
 				911DBEFA2AEF538900632D00 /* Montserrat-LightItalic.ttf in Resources */,
 				91D3CE212AE09A30007A1EB9 /* Assets.xcassets in Resources */,
 				91D3CE622AE09E5E007A1EB9 /* GoogleService-Info.plist in Resources */,
 				911DBEF82AEF538900632D00 /* Montserrat-Medium.ttf in Resources */,
+				9186E8382B749BAE0073C223 /* ReadMe.md in Resources */,
 				911DBEEA2AEF538900632D00 /* Montserrat-ThinItalic.ttf in Resources */,
 				911DBEF72AEF538900632D00 /* Montserrat-Thin.ttf in Resources */,
 				911DBEF02AEF538900632D00 /* Montserrat-Light.ttf in Resources */,

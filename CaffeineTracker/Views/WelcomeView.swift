@@ -23,7 +23,7 @@ struct WelcomeView: View {
                             .frame(width:10)
                         Image("Square")
                             .resizable()
-                            .frame(width: 350, height: 350)
+                            .frame(width: 370, height: 370)
                     }
                     
                     HeaderView(title: "Caffeine Tracker",

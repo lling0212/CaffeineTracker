@@ -18,10 +18,10 @@ struct LoginView: View {
             
             VStack(alignment: .leading) {
                 
-                Rectangle()
-                    .fill(Color(red: 0.96, green: 0.96, blue: 0.95, opacity: 1.0))
-                    .ignoresSafeArea(.all)
-                    .frame(height: 350)
+                Image("CoffeeMug")
+                    .resizable()
+                    .frame(width: 350, height: 350)
+                    .offset(x:20)
                         
                 HeaderView(title: "Login",
                            subtitle: "Login to continue using the app")
