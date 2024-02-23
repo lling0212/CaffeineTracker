@@ -45,12 +45,7 @@ Summary Dashboard
 </div>
 
 <div style="margin-top: 20px;"></div>
-<pre>
-
-
-
-
-</pre>
+&emsp;
 
 Calendar View
 <div align="center" style="text-align:center;">
@@ -61,7 +56,7 @@ Calendar View
 
 <div style="margin-top: 20px;"></div>
 
-**Drink Record List**
+Drink Record List
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/History.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
@@ -84,7 +79,7 @@ Calendar View
 
 #### User Management
 
-**Registration & Authentication**
+Registration & Authentication
 <div align="center" style="display:flex; justify-content:center;">
     <img src="CaffeineTracker/Others/welcome.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
     <img src="CaffeineTracker/Others/signin.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
@@ -95,7 +90,7 @@ Calendar View
 
 <div style="margin-top: 20px;"></div>
 
-**Profile Change**
+Profile Change
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Profile.gif" alt="Profile" width="180">
   <div style="margin-top: 20px;"></div>
