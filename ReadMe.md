@@ -47,7 +47,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 <div style="margin-top: 20px;"></div>
 
 **Calendar View**
-<div style="text-align:center;">
+<div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Calendar.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
   <figcaption style="text-align:center"><em>Custom-built calendar to show past consumption by month; daily record display for user selected date</em></figcaption>
@@ -56,7 +56,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 <div style="margin-top: 20px;"></div>
 
 **Drink Record List**
-<div style="text-align:center;">
+<div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/History.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
   <figcaption style="text-align:center"><em>All past entries grouped by date; option for user to delete selected entries</em></figcaption>
@@ -67,7 +67,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 
 #### Drink Record Entry
 
-<div style="text-align:center;">
+<div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/AddDrink.gif" alt="Profile" width="180">
   <div style="margin-top: 20px;"></div>
   <figcaption style="text-align:center"><em>Users can record new drinks by picking from the default list or customizing a drink entry; all drink data stored on Firestore</em></figcaption>
@@ -79,7 +79,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 #### User Management
 
 **Registration & Authentication**
-<div style="display:flex; justify-content:center;">
+<div align="center" style="display:flex; justify-content:center;">
     <img src="CaffeineTracker/Others/welcome.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
     <img src="CaffeineTracker/Others/signin.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
     <img src="CaffeineTracker/Others/register.png" style="max-width:30%; width:180; height:auto;">
@@ -90,7 +90,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 <div style="margin-top: 20px;"></div>
 
 **Profile Change**
-<div style="text-align:center;">
+<div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Profile.gif" alt="Profile" width="180">
   <div style="margin-top: 20px;"></div>
   <figcaption style="text-align:center"><em>Profile picture change enabled by Photos Picker; image uploaded to Firebase Storage</em></figcaption>
