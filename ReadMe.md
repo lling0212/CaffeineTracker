@@ -35,53 +35,79 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 ## Usage
 
 
+#### Record Data Display
 
-#### User Registration and Authentication
+**Summary Dashboard**
+<div style="text-align:center;">
+  <img src="CaffeineTracker/Others/Dashboard.gif" alt="Dashboard" width="180">
+  <div style="margin-top: 20px;"></div>
+  <figcaption style="text-align:center"><em>Daily & weekly consumption summarized on main dashboard using a progress ring and an interactive bar chart</em></figcaption>
+</div>
 
-welcome
+<div style="margin-top: 20px;"></div>
 
-register
+**Calendar View**
+<div style="text-align:center;">
+  <img src="CaffeineTracker/Others/Calendar.gif" alt="Dashboard" width="180">
+  <div style="margin-top: 20px;"></div>
+  <figcaption style="text-align:center"><em>Custom-built calendar to show past consumption by month; daily record display for user selected date</em></figcaption>
+</div>
 
-login
+<div style="margin-top: 20px;"></div>
 
-register error msg
+**Drink Record List**
+<div style="text-align:center;">
+  <img src="CaffeineTracker/Others/History.gif" alt="Dashboard" width="180">
+  <div style="margin-top: 20px;"></div>
+  <figcaption style="text-align:center"><em>All past entries grouped by date; option for user to delete selected entries</em></figcaption>
+</div>
 
-profile change
+<div style="margin-top: 20px;"></div>
 
 
 #### Drink Record Entry
 
-Default drink list
+<div style="text-align:center;">
+  <img src="CaffeineTracker/Others/AddDrink.gif" alt="Profile" width="180">
+  <div style="margin-top: 20px;"></div>
+  <figcaption style="text-align:center"><em>Users can record new drinks by picking from the default list or customizing a drink entry; all drink data stored on Firestore</em></figcaption>
+</div>
+
+<div style="margin-top: 40px;"></div>
 
 
-Entry form
+#### User Management
 
+**Registration & Authentication**
+<div style="display:flex; justify-content:center;">
+    <img src="CaffeineTracker/Others/welcome.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
+    <img src="CaffeineTracker/Others/signin.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
+    <img src="CaffeineTracker/Others/register.png" style="max-width:30%; width:180; height:auto;">
+</div>
+<div style="margin-top: 20px;"></div>
+<figcaption style="text-align:center"><em>User managed through Firebase Authentication</em></figcaption>
 
+<div style="margin-top: 20px;"></div>
 
-#### Summary Stat Display
+**Profile Change**
+<div style="text-align:center;">
+  <img src="CaffeineTracker/Others/Profile.gif" alt="Profile" width="180">
+  <div style="margin-top: 20px;"></div>
+  <figcaption style="text-align:center"><em>Profile picture change enabled by Photos Picker; image uploaded to Firebase Storage</em></figcaption>
+</div>
 
-summary dashboard
-
-<img src="CaffeineTracker/Others/Dashboard.gif" alt="Dashboard" width="200">
-
-calendar view
-
-drink history
-
+<div style="margin-top: 40px;"></div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
 While the Caffeine Tracker app is currently fully functional, a few key future enhancements could make the app more dynamic, thoughtful and fun - 
 
-##### Enhanced default drink list data
-* Enhanced default drink list data
-* Caffeine metabolism predictive analytics
-* Social aspect of the app
+* **Enhanced default drink list data**: as of now, the default drink data is static and limited to a few types of drinks. Options are being explored to either connect to existing database or to build one by web-scraping drink data to reduce user's manual data entry and to increase accruacy in tracked data
+* **Caffeine metabolism prediction**: depending on when a drink is consumed during a day, the caffeine remaining in one's system decreases. A cool feature to add is a prediction chart on the main dashboard showing how the caffeine amount decreases throughout the remaining day
+* **Social aspect of the app**: Instagram-like feature to let users upload photos and jog down short notes on their drinks, and share with fellow users of the app 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,7 +116,7 @@ While the Caffeine Tracker app is currently fully functional, a few key future e
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This app is a personal project built for learning purposes (and for fun!). It is not published on App Store. It also has some potential further enhancements underway. However, if you'd like to play with it on the XCode simulator locally, here is how you might be able to do that!
+This app is a personal project built for learning purposes (and for fun!). It is not published on App Store. It also has some potential further enhancements underway. However, if you'd like to play with it on XCode locally, here is how you might be able to do that!
 
 
 1. Clone the repo
