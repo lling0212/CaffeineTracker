@@ -37,7 +37,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 
 #### Record Data Display
 
-Summary Dashboard
+<em>Summary Dashboard</em>
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Dashboard.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
@@ -45,9 +45,9 @@ Summary Dashboard
 </div>
 
 <div style="margin-top: 20px;"></div>
-&emsp;
+<br>
 
-Calendar View
+<em>Calendar View</em>
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Calendar.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
@@ -55,8 +55,9 @@ Calendar View
 </div>
 
 <div style="margin-top: 20px;"></div>
+<br>
 
-Drink Record List
+<em>Drink Record List</em>
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/History.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
@@ -64,7 +65,7 @@ Drink Record List
 </div>
 
 <div style="margin-top: 20px;"></div>
-
+<br>
 
 #### Drink Record Entry
 
@@ -75,22 +76,26 @@ Drink Record List
 </div>
 
 <div style="margin-top: 40px;"></div>
+<br>
 
 
 #### User Management
 
-Registration & Authentication
+<em>Registration & Authentication</em>
+<div align="center">
 <div align="center" style="display:flex; justify-content:center;">
-    <img src="CaffeineTracker/Others/welcome.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
-    <img src="CaffeineTracker/Others/signin.png" style="max-width:30%; width:180; height:auto; margin-right: 20px;">
-    <img src="CaffeineTracker/Others/register.png" style="max-width:30%; width:180; height:auto;">
+    <img src="CaffeineTracker/Others/welcome.png" height="380" style="margin-right: 20px;">
+    <img src="CaffeineTracker/Others/signin.png" height="380" style="margin-right: 20px;">
+    <img src="CaffeineTracker/Others/register.png" height="380" style="margin-right: 20px;">
 </div>
 <div style="margin-top: 20px;"></div>
 <figcaption style="text-align:center"><em>User managed through Firebase Authentication</em></figcaption>
+</div>
 
 <div style="margin-top: 20px;"></div>
+<br>
 
-Profile Change
+<em>Profile Change</em>
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Profile.gif" alt="Profile" width="180">
   <div style="margin-top: 20px;"></div>
@@ -98,6 +103,7 @@ Profile Change
 </div>
 
 <div style="margin-top: 40px;"></div>
+<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
