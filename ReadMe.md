@@ -37,7 +37,7 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 
 #### Record Data Display
 
-**Summary Dashboard**
+Summary Dashboard
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Dashboard.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
@@ -45,8 +45,14 @@ Caffeine Tracker allows users to record caffeinated drinks they consume in order
 </div>
 
 <div style="margin-top: 20px;"></div>
+<pre>
 
-**Calendar View**
+
+
+
+</pre>
+
+Calendar View
 <div align="center" style="text-align:center;">
   <img src="CaffeineTracker/Others/Calendar.gif" alt="Dashboard" width="180">
   <div style="margin-top: 20px;"></div>
