@@ -46,7 +46,6 @@ struct CustomtabBar: View {
                 
                 TabbarButton(animation: animation, image: "person.crop.square", selectedTab: $selectedTab)
             }
-            //            .padding(.top)
             .padding(.vertical, 5)
             .background(Color.white)
             .frame(height:95)

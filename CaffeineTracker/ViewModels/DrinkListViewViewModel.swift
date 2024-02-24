@@ -36,7 +36,7 @@ class DrinkListViewViewModel: ObservableObject {
             .document(userid)
             .collection("drinks")
             .order(by: "time", descending: true)
-    
+        
         query.addSnapshotListener{ (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("Error: no documents")
@@ -68,26 +68,16 @@ class DrinkListViewViewModel: ObservableObject {
         let dateStrings = Array(Set(drinks.map {$0.date}))
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM dd, yy"
-
+        
         // Convert strings to dates
         let dates = dateStrings.compactMap { dateFormatter.date(from: $0) }
-
+        
         // Sort the dates
         let sortedDates = dates.sorted(by: >)
-
+        
         // Convert sorted dates back to strings
         let sortedDateStrings = sortedDates.map { dateFormatter.string(from: $0) }
-
+        
         return sortedDateStrings
     }
-    
-//    func sectionHeader(_ key: String) -> String {
-//            return key
-//    }
-//    
-//    func sectionContent(_ key: String) -> [DrinkItem] {
-//        let content = groupedDrinks[key] ?? []
-//        return content.sorted(by: {($0.lastName, $0.firstName) < ($1.lastName, $1.firstName) })
-//    }
-    
 }

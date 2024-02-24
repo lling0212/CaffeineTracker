@@ -39,8 +39,7 @@ class SummaryViewViewModel: ObservableObject {
     }
     
     
-    func fetchData() async throws { //-> String {
-        
+    func fetchData() async throws {
         weekSums = [0,0,0,0,0,0,0]
         let db = Firestore.firestore()
         let query = db.collection("users")

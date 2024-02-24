@@ -19,7 +19,6 @@ class RegisterViewViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var confirmPassword = ""
-    // @Published var loginStatus = ""
     @Published var userMsg = ""
     @Published var profilepic: UIImage?
     @Published var profileURL = ""
@@ -35,7 +34,6 @@ class RegisterViewViewModel: ObservableObject {
         Auth.auth().createUser(withEmail: email, password: password)
             { [weak self] result, error in
             guard let userId = result?.user.uid else {
-//                self?.userMsg = "Register failed :( Please try again."
                 return
             }
                 

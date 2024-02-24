@@ -64,7 +64,4 @@ class LoginViewViewModel: ObservableObject {
         return true
     }
     
-    // configure email link sign in
-    
-    
 }
